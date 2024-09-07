@@ -1,11 +1,11 @@
 <?php
 include_once 'Estructura/Header.php';
-// Incluir las clases necesarias
+
 include_once '../Control/AbmAuto.php';
 include_once '../Control/AbmPersona.php';
 
 
-// Crear instancias de las clases de control
+
 $abmAuto = new AbmAuto();
 $abmPersona = new AbmPersona();
 
@@ -24,11 +24,11 @@ $autos = $abmAuto->buscar(null);
 <head>
     <meta charset="UTF-8">
     <title>Ver Autos</title>
-    <!-- Incluir Bootstrap CSS -->
+  
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container rounded shadow mb-3">
+    <div class="container contenedor rounded shadow mb-3">
         <h1 class="my-4">Listado de Autos</h1>
         <?php
         if (count($autos) > 0) {
@@ -71,7 +71,7 @@ $autos = $abmAuto->buscar(null);
         }
         ?>
     </div>
-    <!-- Incluir Bootstrap JS y dependencias -->
+    
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>

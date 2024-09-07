@@ -1,9 +1,10 @@
+
 </main>
 </div>
 </div>
 
 <footer class="bg-secondary text-white py-4">
-    <div class="container text-center">
+    <div class="container text-center futer">
         <ul class="list-inline">
             <li class="list-inline-item">Pepe</li>
             <li class="list-inline-item">Fulano</li>
@@ -13,8 +14,7 @@
     </div>
 </footer>
 
-<!-- Optional JavaScript -->
-<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
     <script src="/vista/js/jquery/jquery-3.5.1.slim.min.js"></script>
 <script src="/vista/js/popper/popper.min.js"></script>
 <script src="/vista/js/bootstrap/4.5.2/bootstrap.min.js"></script>
