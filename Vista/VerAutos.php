@@ -1,8 +1,9 @@
 <?php
-include_once 'Estructura/Header.php';
+include 'Estructura/Header.php';
 
-include_once '../Control/AbmAuto.php';
-include_once '../Control/AbmPersona.php';
+include '../Modelo/Auto.php';
+include '../Control/AbmAuto.php';
+include '../Control/AbmPersona.php';
 
 
 
@@ -12,11 +13,6 @@ $abmPersona = new AbmPersona();
 
 // Obtener todos los autos
 $autos = $abmAuto->buscar(null);
-/*foreach ($autos as $auto) {
-    echo "hola";
-    print_r($auto);
-}*/
-//print_r($autos);
 
 
 ?>

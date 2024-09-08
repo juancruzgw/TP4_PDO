@@ -1,6 +1,9 @@
-<?php
-include_once "./Estructura/Header.php";
-?>
+    <?php
+    include_once "./Estructura/Header.php";
+    include './../Modelo/Auto.php';
+    include './../Control/AbmAuto.php';
+    ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,8 +13,6 @@ include_once "./Estructura/Header.php";
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js" type="module"></script>
     <script src="../Vista/Assets/validaciones.js" type="module" ></script>
-    
-
 </head>
 <body>
     <div class="container cont-form">
@@ -29,11 +30,5 @@ include_once "./Estructura/Header.php";
        </form>
 
         </div>
-      
     </div>    
-    <?php include_once "./Estructura/Footer.php"?>
-</body>
-
-    
-
-</html>
+<?php include_once "./Estructura/Footer.php"?>

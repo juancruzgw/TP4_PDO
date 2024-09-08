@@ -1,48 +1,37 @@
-<?php
-include_once "../Estructura/Header.php";
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div class="container  cont-form  ">
-   
-        <div class="respuestaBuscarAuto">
-        
-        <?php
-        include_once "../../utils/utils.php";
-        include_once '../../Control/AbmAuto.php';
+<?php include_once "../Estructura/Header.php";?>
 
-        $abm = new AbmAuto();
+<div class="container cont-form">
 
-        $datos = data_submitted();
-        $dniDuenio = ["dniDuenio" => $datos["dniDuenio"]];
-        $auto = $abm->buscar($dniDuenio);
+    <div class="respuestaBuscarAuto">
+    
+    <?php
+    include "../../utils/utils.php";
+    include '../../Modelo/Auto.php';
+    include '../../Control/AbmAuto.php';
 
-        if(isset($auto[0])){
-            echo "<h2>Resultado de la busqueda</h2>";
-            $autoEncontrado = $auto[0];
+    $abm = new AbmAuto();
 
+    $datos = data_submitted();
+    $dniDuenio = ["dniDuenio" => $datos["dniDuenio"]];
+    $autos = $abm->buscar($dniDuenio);
+
+    if(isset($autos[0])){
+        echo "<h2>Resultado de la busqueda</h2>";
+        foreach ($autos as $auto) {
+            $autoEncontrado = $auto;
             echo "<div class='respuestaBuscarAuto'>
-
                     <p>Patente: {$autoEncontrado->getPatente()}</p>
                     <p>marca: {$autoEncontrado->getMarca()}</p>
                     <p>modelo:{$autoEncontrado->getModelo()}</p>
                     <p>dni dueño:{$autoEncontrado->getDniDuenio()}</p>
-            
-                  </div>";
-
-        }else{
-            echo "<h2>Auto no encontrado</h2>";
-        }?>
-
+                    </div>";
+        }
         
-        </div>
+    }else{
+        echo "<h2>Auto no encontrado</h2>";
+    }?>
+
+    
     </div>
-    <?php include_once "../Estructura/Footer.php"?>
-</body>
-</html>
+</div>
+<?php include_once "../Estructura/Footer.php"?>

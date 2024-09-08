@@ -1,21 +1,13 @@
-<?php
-include_once "../Estructura/Header.php";
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div class="container  cont-form  ">
+<?php include "../Estructura/Header.php";?>
+
+    <div class="container cont-form">
    
         <div class="respuestaBuscarAuto">
         
         <?php
-        include_once "../../utils/utils.php";
-        include_once '../../Control/AbmAuto.php';
+        include "../../utils/utils.php";
+        include '../../Modelo/Auto.php';
+        include '../../Control/AbmAuto.php';
         
         $abm = new AbmAuto();
 
@@ -39,6 +31,5 @@ include_once "../Estructura/Header.php";
         
         </div>
     </div>
-    <?php include_once "../Estructura/Footer.php"?>
-</body>
-</html>
+    
+<?php include_once "../Estructura/Footer.php"?>

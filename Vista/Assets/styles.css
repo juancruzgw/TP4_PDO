@@ -1,7 +1,7 @@
 
 .contenedor {
     width: 60%;
-    margin: auto 0;
+    margin: auto;
     min-height: 600px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
@@ -14,6 +14,7 @@
     display: flex;
     min-height: 600px;
     justify-content: center;
+    text-align: center;
     align-items: top;
     max-height: 50% !important;
     background-color: #f8f9fa; /* Fondo claro */
@@ -49,7 +50,7 @@
    
 }
 .futer .list-inline-item:hover{
-   /* transform: rotateX(360deg);*/
+    transform: rotateX(360deg);
     
     color: #000000;
     
@@ -63,26 +64,27 @@
     
     border-radius: 5px;
     box-shadow: 0 0 10px rgb(85, 85, 85);
-
+    
+    
 }
-/*
+
 @keyframes colorChange {
     0% {
         color: #000000; 
     }
     25% {
-        color: #ffffff; 
+        color: #707aff; 
     }
     50% {
         color: #000000; 
     }
     75% {
-        color: #ffffff; 
+        color: #134736; 
     }
     100% {
-        color: #000000; 
+        color: #ffffff; 
     }
-}*/
+}
 
 
 .btn-ingrese{
