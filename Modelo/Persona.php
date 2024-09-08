@@ -1,6 +1,6 @@
-
 <?php 
 
+include_once 'Conector/BaseDatos.php';
 class Persona extends BaseDatos {
     private $nroDni;
     private $nombre;

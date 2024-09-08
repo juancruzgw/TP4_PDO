@@ -137,7 +137,6 @@ class AbmPersona extends Persona {
             if (isset($param['Domicilio']))
                 $where .= " and domicilio ='" . $param['Domicilio'] . "'";
         }
-        
         $obj = new Persona();
         $arreglo = $obj->listar($where);
         return $arreglo;

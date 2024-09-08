@@ -34,6 +34,8 @@ include_once "../Estructura/Header.php";
         }else{
             echo "<h2>Auto no encontrado</h2>";
         }?>
+
+        
         </div>
     </div>
     <?php include_once "../Estructura/Footer.php"?>
