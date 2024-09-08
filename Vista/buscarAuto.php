@@ -7,6 +7,9 @@ include_once "./Estructura/Header.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js" type="module"></script>
+    <script src="../Vista/Assets/validaciones.js" type="module" ></script>
     
 
 </head>
@@ -27,11 +30,7 @@ include_once "./Estructura/Header.php";
 
         </div>
       
-    </div>
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
-    <script src="../Vista/Assets/validaciones.js" ></script>
-    
+    </div>    
     <?php include_once "./Estructura/Footer.php"?>
 </body>
 

@@ -1,22 +1,19 @@
-alert("hola");
+$.validator.addMethod("patenteValida", function(value){
+    return /^[A-Za-z]{3}\s[0-9]{3}$/.test(value) || /^[A-Za-z]{3}[0-9]{3}$/.test(value);
+}, "tiene que ser una patente valida");
+
 
 
 $("#formulario").validate({
     rules:{
         patente:{
             required: true,
-            minlength: 6,
+            patenteValida: true,
         }
     },
     messages:{
         patente:{
             required: "Debe ingresar la patente",
-            minlength: "La patente debe tener al menos 6 caracteres"
         }
-    },
-    submitHandler: function(form) {
-        return false; // Cancel the form submission
-
-        
     }
 });
