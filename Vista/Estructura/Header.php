@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header</title>
-    <link rel="stylesheet" href="/TP4/Vista/Assets/styles.css">
+    <link rel="stylesheet" href="/TP4_PDO/Vista/Assets/styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
 </head>
@@ -18,13 +18,13 @@
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul class="navbar-nav ">
                 <li class="nav-item m-2">
-                    <a class="nav-link btn btn-dark mx-1 text-white" href="/TP4/Vista/Index.php">Home</a>
+                    <a class="nav-link btn btn-dark mx-1 text-white" href="./">Home</a>
                 </li>
                 <li class="nav-item m-2">
-                    <a class="nav-link btn btn-dark mx-1 text-white" href="/TP4/Vista/VerAutos.php">Ver Autos</a>
+                    <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/VerAutos.php">Ver Autos</a>
                 </li>
                 <li class="nav-item m-2">
-                    <a class="nav-link btn btn-dark mx-1 text-white" href="/TP4/Vista/buscarAuto.php">Buscar Autos</a>
+                    <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/buscarAuto.php">Buscar Autos</a>
                 </li>
                 <li class="nav-item m-2">
                     <a class="nav-link btn btn-dark mx-1 text-white" href="#">Listar Autos</a>

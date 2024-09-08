@@ -1,11 +1,12 @@
 <?php
-include_once '../Modelo/Auto.php';
+include_once '../../Modelo/Auto.php';
+
 class AbmAuto extends Auto {
-   
 
     // Espera como parámetro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto
     public function abm($datos) {
         $resp = false;
+
         if ($datos['accion'] == 'editar') {
             if ($this->modificacion($datos)) {
                 $resp = true;
@@ -21,6 +22,7 @@ class AbmAuto extends Auto {
                 $resp = true;
             }
         }
+
         return $resp;
     }
 
@@ -32,8 +34,7 @@ class AbmAuto extends Auto {
     private function cargarObjeto($param) {
         $obj = null;
 
-        if (array_key_exists('patente', $param) && array_key_exists('marca', $param) && array_key_exists('dniDuenio', $param) &&
-            array_key_exists('modelo', $param)) {
+        if (array_key_exists('patente', $param) && array_key_exists('marca', $param) && array_key_exists('dniDuenio', $param) && array_key_exists('modelo', $param)) {
             $obj = new Auto();
             $obj->setear($param['patente'], $param['marca'], $param['dniDuenio'], $param['modelo']);
         }
@@ -76,6 +77,7 @@ class AbmAuto extends Auto {
         $resp = false;
         $param['patente'] = null; // Asumiendo que se autogenera o se maneja de otra manera
         $elObjtTabla = $this->cargarObjeto($param);
+        
         if ($elObjtTabla != null && $elObjtTabla->insertar()) {
             $resp = true;
         }

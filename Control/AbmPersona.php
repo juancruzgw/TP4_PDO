@@ -76,6 +76,7 @@ class AbmPersona extends Persona {
         $resp = false;
         $param['NroDni'] = null; // Asumiendo que se autogenera o se maneja de otra manera
         $elObjtTabla = $this->cargarObjeto($param);
+        
         if ($elObjtTabla != null && $elObjtTabla->insertar()) {
             $resp = true;
         }

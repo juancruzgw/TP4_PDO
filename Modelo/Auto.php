@@ -17,10 +17,11 @@ class Auto extends BaseDatos {
         $this->mensajeOperacion = "";
     }
 
-    public function setear($patente, $marca, $modelo) {
+    public function setear($patente, $marca, $modelo, $dniNuevoDuenio) {
         $this->setPatente($patente);
         $this->setMarca($marca);
         $this->setModelo($modelo);
+        $this->setDniDuenio($dniNuevoDuenio);
     }
 
     public function getMensajeOperacion() {
@@ -67,6 +68,7 @@ class Auto extends BaseDatos {
         $resp = false;
         $base = new BaseDatos();
         $sql = "SELECT * FROM auto WHERE patente = '".$this->getPatente()."'";
+
         if ($base->Iniciar()) {
             $res = $base->Ejecutar($sql);
             if($res > -1) {
@@ -86,6 +88,7 @@ class Auto extends BaseDatos {
         $resp = false;
         $base = new BaseDatos();
         $sql = "INSERT INTO auto(patente, marca, modelo) VALUES('".$this->getPatente()."', '".$this->getMarca()."', '".$this->getModelo()."');";
+        
         if ($base->Iniciar()) {
             if ($base->Ejecutar($sql)) {
                 $resp = true;
@@ -102,6 +105,7 @@ class Auto extends BaseDatos {
         $resp = false;
         $base = new BaseDatos();
         $sql = "UPDATE auto SET marca='".$this->getMarca()."', modelo='".$this->getModelo()."' WHERE patente='".$this->getPatente()."'";
+        
         if ($base->Iniciar()) {
             if ($base->Ejecutar($sql)) {
                 $resp = true;
@@ -118,6 +122,7 @@ class Auto extends BaseDatos {
         $resp = false;
         $base = new BaseDatos();
         $sql = "DELETE FROM auto WHERE patente='".$this->getPatente()."'";
+        
         if ($base->Iniciar()) {
             if ($base->Ejecutar($sql)) {
                 $resp = true;
@@ -134,15 +139,17 @@ class Auto extends BaseDatos {
         $arreglo = array();
         $base = new BaseDatos();
         $sql = "SELECT * FROM auto";
+        
         if ($parametro != "") {
             $sql .= ' WHERE '.$parametro;
         }
         $res = $base->Ejecutar($sql);
+        
         if($res > -1) {
             if($res > 0) {
                 while ($row = $base->Registro()) {
                     $obj = new Auto();
-                    $obj->setear($row['Patente'], $row['Marca'], $row['Modelo']);
+                    $obj->setear($row['Patente'], $row['Marca'], $row['Modelo'], $row['DniDuenio']);
                     array_push($arreglo, $obj);
                 }
             }
@@ -151,5 +158,8 @@ class Auto extends BaseDatos {
         }
         return $arreglo;
     }
-    
+
+    public function __toString() {
+        return "Patente: {$this->getPatente()}Marca:{$this->getMarca()}Modelo:{$this->getModelo()} DniDuenio:{$this->getDniDuenio()}";
+    }
 }
