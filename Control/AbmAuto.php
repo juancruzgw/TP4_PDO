@@ -1,5 +1,5 @@
 <?php
-include_once 'C:\xampp\htdocs\TP4_PDO\Modelo\Auto.php';
+include_once '../Modelo/Auto.php';
 
 class AbmAuto extends Auto {
 

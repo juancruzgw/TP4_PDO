@@ -61,9 +61,11 @@ $personas = $abmPersona->buscar(null);
                 echo '<td>' . $apellidoDuenio . '</td>';
                 echo '</tr>';
             }
-
             echo '</tbody>';
             echo '</table>';
+            echo "<h2>Buscar auto por persona</h2>";
+            echo "<button class='btn-ingrese'><a style='color:white' href='autosPersona.php'>Ingrese aca</a></button>";
+
         } else {
             echo '<div class="alert alert-danger m-3 w-50" role="alert" >No hay autos cargados en la base de datos.</div>';
         }
@@ -71,6 +73,7 @@ $personas = $abmPersona->buscar(null);
         ?>
     </div>
     
+
     
     <?php include_once "./Estructura/Footer.php"?>
     
