@@ -3,14 +3,11 @@
 include_once 'Estructura/Header.php';
 include_once '../Control/AbmPersona.php';
 
-
-
 $abmPersona = new AbmPersona();
 
 
 // Obtener todas las personas
 $personas = $abmPersona->buscar(null);
-
 
 ?>
 <!DOCTYPE html>
@@ -75,7 +72,5 @@ $personas = $abmPersona->buscar(null);
     
 
     
-    <?php include_once "./Estructura/Footer.php"?>
+<?php include_once "./Estructura/Footer.php"?>
     
-</body>
-</html>

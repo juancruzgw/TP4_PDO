@@ -75,6 +75,3 @@ $autos = $abmAuto->buscar(null);
     
     
     <?php include_once "./Estructura/Footer.php"?>
-    
-</body>
-</html>

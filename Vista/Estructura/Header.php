@@ -9,6 +9,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
     
     <link rel="stylesheet" href="Assets/styles.css?v=2.3">
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" type="module"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js" type="module"></script>
+    <script src="Assets/validaciones.js" type="module" ></script>
 
 </head>
 <body>
