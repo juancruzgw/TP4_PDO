@@ -1,5 +1,6 @@
 <?php
-include_once '../Modelo/Persona.php';
+
+/*include '../Modelo/Persona.php';*/
 
 class AbmPersona extends Persona {
     // Espera como parámetro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto
@@ -74,9 +75,7 @@ class AbmPersona extends Persona {
      */
     public function alta($param) {
         $resp = false;
-        $param['NroDni'] = null; // Asumiendo que se autogenera o se maneja de otra manera
         $elObjtTabla = $this->cargarObjeto($param);
-        
         if ($elObjtTabla != null && $elObjtTabla->insertar()) {
             $resp = true;
         }

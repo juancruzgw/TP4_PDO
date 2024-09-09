@@ -24,6 +24,7 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
     margin-top: 20px; /* Margen superior */
 }
+
 .contenedor-form {
     display: flex  ;
     height: 50%;
@@ -96,4 +97,35 @@
     font-size: 16px; /* Tamaño de fuente */
     cursor: pointer; /* Cambia el cursor al pasar por encima */
     transition: background-color 0.3s ease; /* Transición suave */
+}
+
+.respPersonaCreada {
+    display: flex;
+    min-height: 600px;
+    justify-content: center;
+    text-align: center;
+    align-items: top;
+    max-height: 50% !important;
+    background-color: #f8f9fa; /* Fondo claro */
+    max-width: 50%;
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin-top: 20px; /* Margen superior */
+    background-color: rgb(14, 170, 14);
+}
+.respPersonaNoCreada {
+    display: flex;
+    min-height: 600px;
+    justify-content: center;
+    text-align: center;
+    align-items: top;
+    max-height: 50% !important;
+    background-color: #f8f9fa; /* Fondo claro */
+    max-width: 50%;
+    padding: 20px; /* Espaciado interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin-top: 20px; /* Margen superior */
+    background-color: rgb(151, 28, 28);
 }

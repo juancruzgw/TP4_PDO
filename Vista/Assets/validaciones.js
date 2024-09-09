@@ -17,3 +17,29 @@ $("#formulario").validate({
         }
     }
 });
+
+
+$("#formularioCrearPersona").validate({
+    rules:{
+        Nombre:{
+            required: true,
+            minlength: 3,
+            maxlength: 50
+        },
+        Apellido:{
+            required: true,
+            minlength: 3,
+            maxlength: 50
+        },
+        NroDni:{
+            required: true,
+            digits: true,
+            minlength: 7,
+            maxlength: 8
+        },
+        fechaNacimiento:{
+            required: true,
+            date: true
+        }
+    }
+})

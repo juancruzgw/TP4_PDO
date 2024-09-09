@@ -13,7 +13,6 @@
               </div>
               <button type="submit" class="btn btn-primary btn-block ">Buscar<i class="bi bi-search"></i></button>
        </form>
-
         </div>
       
     </div>    

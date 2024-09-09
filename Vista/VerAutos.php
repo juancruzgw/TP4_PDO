@@ -1,33 +1,17 @@
 <?php
 include 'Estructura/Header.php';
-
 include '../Modelo/Auto.php';
 include '../Control/AbmAuto.php';
 include '../Control/AbmPersona.php';
 
-
-
 $abmAuto = new AbmAuto();
 $abmPersona = new AbmPersona();
-
 
 // Obtener todos los autos
 $autos = $abmAuto->buscar(null);
 
 
 ?>
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Ver Autos</title>
-  
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" type="module"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" type="module"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" type="module"></script>
-</head>
-<body>
     <div class="container contenedor rounded shadow mb-3">
         <h1 class="my-4">Listado de Autos</h1>
         <?php
@@ -74,4 +58,4 @@ $autos = $abmAuto->buscar(null);
     </div>
     
     
-    <?php include_once "./Estructura/Footer.php"?>
+<?php include_once "./Estructura/Footer.php";?>
