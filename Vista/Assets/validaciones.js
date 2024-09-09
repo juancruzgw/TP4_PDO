@@ -37,9 +37,52 @@ $("#formularioCrearPersona").validate({
             minlength: 7,
             maxlength: 8
         },
-        fechaNacimiento:{
+        fechaNac:{
             required: true,
             date: true
+        },
+        Telefono:{
+            required: true,
+            digits: true,
+            minlength: 8,
+            maxlength: 15
+        },
+        Domicilio:{
+            required: true,
+            minlength: 5,
+            maxlength: 50
+        }
+    }, messages:{
+        Nombre:{
+            required: "Debe ingresar el nombre",
+            minlength: "El nombre debe tener al menos 3 caracteres",
+            maxlength: "El nombre debe tener menos de 50 caracteres"
+        },
+        Apellido:{
+            required: "Debe ingresar el apellido",
+            minlength: "El apellido debe tener al menos 3 caracteres",
+            maxlength: "El apellido debe tener menos de 50 caracteres"
+        },
+        NroDni:{
+            required: "Debe ingresar el DNI",
+            digits: "El DNI debe ser un numero",
+            minlength: "El DNI debe tener al menos 7 caracteres",
+            maxlength: "El DNI debe tener menos de 8 caracteres"
+        },
+        fechaNac:{
+            required: "Debe ingresar la fecha de nacimiento",
+            date: "Debe ser una fecha valida"
+        },
+        Telefono:{
+            required: "Debe ingresar el telefono",
+            digits: "El telefono debe ser un numero",
+            minlength: "El telefono debe tener al menos 8 caracteres",
+            maxlength: "El telefono debe tener menos de 15 caracteres"
+        },
+        Domicilio:{
+            required: "Debe ingresar el domicilio",
+            minlength: "El domicilio debe tener al menos 5 caracteres",
+            maxlength: "El domicilio debe tener menos de 50 caracteres"
         }
     }
 })

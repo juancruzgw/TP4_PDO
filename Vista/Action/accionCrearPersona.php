@@ -12,7 +12,6 @@ $datos = data_submitted();
 $dni = ["NroDni" => $datos["NroDni"]];
 $persona = new Persona();
 
-print_r($dni);
 
 if(isset($datos)){
    // echo "paso 1";
@@ -25,7 +24,7 @@ if(isset($datos)){
             </div>";
     }else{
         echo "<div class='respPersonaNoCreada'>
-                No se pudo crear la persona😢
+                El dni ya esta registrado en la base de datos. 😔
              </div>";
     }
 }else{
