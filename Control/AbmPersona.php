@@ -2,7 +2,7 @@
 
 /*include '../Modelo/Persona.php';*/
 
-class AbmPersona extends Persona {
+class AbmPersona{
     // Espera como parámetro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto
 
     public function abm($datos) {

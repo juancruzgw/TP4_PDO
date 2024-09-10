@@ -1,5 +1,6 @@
 <?php
 include 'Estructura/Header.php';
+include '../modelo/Persona.php';
 include '../Modelo/Auto.php';
 include '../Control/AbmAuto.php';
 include '../Control/AbmPersona.php';
