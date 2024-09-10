@@ -87,7 +87,7 @@ class Auto extends BaseDatos {
     public function insertar() {
         $resp = false;
         $base = new BaseDatos();
-        $sql = "INSERT INTO auto(patente, marca, modelo) VALUES('".$this->getPatente()."', '".$this->getMarca()."', '".$this->getModelo()."');";
+        $sql = "INSERT INTO auto(Patente, Marca, Modelo, DniDuenio) VALUES('".$this->getPatente()."', '".$this->getMarca()."', ".$this->getModelo().",'".$this->getDniDuenio()."');";
         
         if ($base->Iniciar()) {
             if ($base->Ejecutar($sql)) {
@@ -138,7 +138,7 @@ class Auto extends BaseDatos {
     public function listar($parametro="") {
         $arreglo = array();
         $base = new BaseDatos();
-        $sql = "SELECT * FROM auto";
+        $sql = "SELECT * FROM auto ";
         
         if ($parametro != "") {
             $sql .= ' WHERE '.$parametro;

@@ -73,7 +73,7 @@ class AbmAuto{
      */
     public function alta($param) {
         $resp = false;
-        $param['patente'] = null; // Asumiendo que se autogenera o se maneja de otra manera
+        //$param['patente'] = null; // Asumiendo que se autogenera o se maneja de otra manera
         $elObjtTabla = $this->cargarObjeto($param);
         
         if ($elObjtTabla != null && $elObjtTabla->insertar()) {
