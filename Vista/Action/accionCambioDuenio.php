@@ -27,12 +27,10 @@ $abmAuto = new AbmAuto();
 
 $datos = data_submitted();
 
-$patente = ["patente" => $datos["patente"]];
-$nroDocumento = ["NroDni" => $datos["nroDocumento"]];
 print_r($datos);
-if(isset($datos)){
-    if(!empty($abmAuto->buscar($patente) && $abmPersona->buscar($nroDocumento))){
-        $abmAuto->modificacion($datos);
+
+if(isset($datos['patente']) && isset($datos['NroDni'])){
+    if(!empty($abmAuto->buscar($datos)[0]) && !empty($abmPersona->buscar($datos)[0])){
         echo "se modifico con exito";
     }else{
         echo "No se encontro a la persona a cargo";

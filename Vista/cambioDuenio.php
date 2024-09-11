@@ -8,8 +8,8 @@
             <label for="patente">Ingrese el numero de patente del auto</label>
             <input type="text" class="form-control" id="patente" name="patente">
 
-            <label for="nroDocumento">Ingrese el numero de documento de una persona</label>
-            <input type="text" class="form-control" id="nroDocumento" name="nroDocumento">
+            <label for="NroDni">Ingrese el numero de documento de una persona</label>
+            <input type="text" class="form-control" id="NroDni" name="NroDni">
 
         </div>
         <button type="submit" class="btn btn-primary">Guardar</button>

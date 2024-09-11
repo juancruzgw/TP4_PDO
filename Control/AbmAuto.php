@@ -132,13 +132,14 @@ class AbmAuto{
                 $where .= " and patente ='" . $param['patente'] . "'";
             if (isset($param['marca']))
                 $where .= " and marca ='" . $param['marca'] . "'";
-            if (isset($param['NroDni'])){
-               $where .= " and DniDuenio =" . $param['NroDni'];
+            if (isset($param['DniDuenio'])){
+               $where .= " and DniDuenio =" . $param['DniDuenio'];
             }
             if (isset($param['modelo']))
                 $where .= " and modelo ='" . $param['modelo'] . "'";
         }
         $obj = new Auto();
+        echo "<h2>where: $where</h2>";
         $arreglo = $obj->listar($where);
         return $arreglo;
     }
