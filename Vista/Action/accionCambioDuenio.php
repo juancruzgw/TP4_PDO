@@ -13,7 +13,7 @@
 
 -Mostrar mensajes de error en caso de que el auto o la persona no se encuentren
 cargados. Utilizar css y validaciones javaScript cuando crea conveniente. Recordar usar la capa de control
-antes generada, no se puede acceder directamente a las clases del OR
+antes generada, no se puede acceder directamente a las clases del ORM
 */
 
 include "../../utils/utils.php";
@@ -29,10 +29,10 @@ $datos = data_submitted();
 
 $patente = ["patente" => $datos["patente"]];
 $nroDocumento = ["NroDni" => $datos["nroDocumento"]];
-
+print_r($datos);
 if(isset($datos)){
     if(!empty($abmAuto->buscar($patente) && $abmPersona->buscar($nroDocumento))){
-        echo $abmAuto->modificacion($datos);
+        $abmAuto->modificacion($datos);
         echo "se modifico con exito";
     }else{
         echo "No se encontro a la persona a cargo";

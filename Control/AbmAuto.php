@@ -105,6 +105,7 @@ class AbmAuto{
      * @return boolean
      */
     public function modificacion($param) {
+
         $resp = false;
 
         if ($this->seteadosCamposClaves($param)) {
