@@ -46,7 +46,7 @@ CREATE TABLE `persona` (
   `NroDni` varchar(10) character set utf8 collate utf8_unicode_ci NOT NULL,
   `Apellido` varchar(50) character set utf8 collate utf8_unicode_ci NOT NULL,
   `Nombre` varchar(50) character set utf8 collate utf8_unicode_ci NOT NULL,
-  `fechaNac` date NOT NULL default '0000-00-00',
+  `fechaNac` date not null,
   `Telefono` varchar(20) character set utf8 collate utf8_unicode_ci NOT NULL,
   `Domicilio` varchar(200) character set utf8 collate utf8_unicode_ci NOT NULL,
   PRIMARY KEY  (`NroDni`)
