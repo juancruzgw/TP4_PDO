@@ -2,7 +2,7 @@
 
 /*include '../Modelo/Persona.php';*/
 
-class AbmPersona extends Persona {
+class AbmPersona{
     // Espera como parámetro un arreglo asociativo donde las claves coinciden con los nombres de las variables instancias del objeto
 
     public function abm($datos) {
@@ -124,7 +124,7 @@ class AbmPersona extends Persona {
         $where = " true ";
         if ($param <> NULL) {
             if (isset($param['NroDni']))
-                $where .= " and nroDni =" . $param['NroDni'];
+                $where .= " and NroDni =" . $param['NroDni'];
             if (isset($param['Nombre']))
                 $where .= " and nombre ='" . $param['Nombre'] . "'";
             if (isset($param['Apellido']))

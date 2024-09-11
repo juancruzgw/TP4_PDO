@@ -12,9 +12,7 @@
     $abm = new AbmAuto();
 
     $datos = data_submitted();
-    $dniDuenio = ["dniDuenio" => $datos["dniDuenio"]];
-    $autos = $abm->buscar($dniDuenio);
-
+    $autos = $abm->buscar($datos);
     if(isset($autos[0])){
         echo "<h2>Resultado de la busqueda</h2>";
         foreach ($autos as $auto) {
@@ -23,7 +21,7 @@
                     <p>Patente: {$autoEncontrado->getPatente()}</p>
                     <p>marca: {$autoEncontrado->getMarca()}</p>
                     <p>modelo:{$autoEncontrado->getModelo()}</p>
-                    <p>dni dueño:{$autoEncontrado->getDniDuenio()}</p>
+                    <p>dni dueño:{$autoEncontrado->getNroDni()}</p>
                     </div>";
         }
         

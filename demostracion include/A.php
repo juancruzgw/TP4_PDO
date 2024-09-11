@@ -1,0 +1,3 @@
+<?php
+
+$variableA = 5;

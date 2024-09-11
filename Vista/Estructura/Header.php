@@ -36,10 +36,16 @@
                     <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/buscarAuto.php">Buscar Autos</a>
                 </li>
                 <li class="nav-item m-2">
-                    <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/listaPersona.php">Listar Autos</a>
+                    <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/listaPersona.php">Listar Personas</a>
                 </li>
                 <li class="nav-item m-2">
                     <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/nuevaPersona.php">Registrar Persona</a>
+                </li>
+                <li class="nav-item m-2" href="../../../TP4_PDO/Vista/NuevoAuto.php"> 
+                    <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/NuevoAuto.php">registrar auto</a>
+                </li>
+                <li class="nav-item m-2" href="../../../TP4_PDO/Vista/NuevoAuto.php"> 
+                    <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/cambioDuenio.php">Cambio de dueño del auto</a>
                 </li>
             </ul>
         </div>

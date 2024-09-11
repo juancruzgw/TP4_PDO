@@ -1,5 +1,6 @@
 <?php
 include 'Estructura/Header.php';
+include '../modelo/Persona.php';
 include '../Modelo/Auto.php';
 include '../Control/AbmAuto.php';
 include '../Control/AbmPersona.php';
@@ -30,7 +31,7 @@ $autos = $abmAuto->buscar(null);
             foreach ($autos as $auto) {
                 
                 // Obtener los datos del dueño
-                $dniDuenio = $auto->getDniDuenio();
+                $dniDuenio = $auto->getNroDni();
                 $param = ['NroDni' => $dniDuenio];
                 $duenio = $abmPersona->buscar($param);
 
