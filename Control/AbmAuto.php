@@ -31,10 +31,9 @@ class AbmAuto{
      */
     private function cargarObjeto($param) {
         $obj = null;
-
-        if (array_key_exists('patente', $param) && array_key_exists('marca', $param) && array_key_exists('dniDuenio', $param) && array_key_exists('modelo', $param)) {
+        if (array_key_exists('patente', $param) && array_key_exists('marca', $param) && array_key_exists('NroDni', $param) && array_key_exists('modelo', $param)) {
             $obj = new Auto();
-            $obj->setear($param['patente'], $param['marca'], $param['dniDuenio'], $param['modelo']);
+            $obj->setear($param['patente'], $param['marca'], $param['modelo'], $param['NroDni']);
         }
         return $obj;
     }
@@ -46,7 +45,7 @@ class AbmAuto{
      */
     private function cargarObjetoConClave($param) {
         $obj = null;
-
+        
         if (isset($param['patente'])) {
             $obj = new Auto();
             $obj->setear($param['patente'], null, null, null);
@@ -75,9 +74,10 @@ class AbmAuto{
         $resp = false;
         //$param['patente'] = null; // Asumiendo que se autogenera o se maneja de otra manera
         $elObjtTabla = $this->cargarObjeto($param);
-        
+        echo "entra ID 1 <br>";
         if ($elObjtTabla != null && $elObjtTabla->insertar()) {
             $resp = true;
+            echo "lo inserta ---------";
         }
         return $resp;
     }
@@ -127,8 +127,9 @@ class AbmAuto{
                 $where .= " and patente ='" . $param['patente'] . "'";
             if (isset($param['marca']))
                 $where .= " and marca ='" . $param['marca'] . "'";
-            if (isset($param['dniDuenio']))
-                $where .= " and dniDuenio =" . $param['dniDuenio'];
+            if (isset($param['NroDni'])){
+               $where .= " and DniDuenio =" . $param['NroDni'];
+            }
             if (isset($param['modelo']))
                 $where .= " and modelo ='" . $param['modelo'] . "'";
         }

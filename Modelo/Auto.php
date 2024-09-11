@@ -5,7 +5,7 @@ include_once 'Conector/BaseDatos.php';
 class Auto extends BaseDatos {
     private $patente;
     private $marca;
-    private $dniDuenio;
+    private $NroDni;
     private $modelo;
     private $mensajeOperacion;
 
@@ -21,7 +21,7 @@ class Auto extends BaseDatos {
         $this->setPatente($patente);
         $this->setMarca($marca);
         $this->setModelo($modelo);
-        $this->setDniDuenio($dniNuevoDuenio);
+        $this->setNroDni($dniNuevoDuenio);
     }
 
     public function getMensajeOperacion() {
@@ -48,12 +48,12 @@ class Auto extends BaseDatos {
         $this->marca = $marca;
     }
 
-    public function getDniDuenio() {
-        return $this->dniDuenio;
+    public function getNroDni() {
+        return $this->NroDni;
     }
 
-    public function setDniDuenio($dniDuenio) {
-        $this->dniDuenio = $dniDuenio;
+    public function setNroDni($NroDni) {
+        $this->NroDni = $NroDni;
     }
 
     public function getModelo() {
@@ -67,7 +67,7 @@ class Auto extends BaseDatos {
     public function cargar() {
         $resp = false;
         $base = new BaseDatos();
-        $sql = "SELECT * FROM auto WHERE patente = '".$this->getPatente()."'";
+        $sql = "SELECT * FROM `auto` WHERE patente = '".$this->getPatente()."'";
 
         if ($base->Iniciar()) {
             $res = $base->Ejecutar($sql);
@@ -87,11 +87,17 @@ class Auto extends BaseDatos {
     public function insertar() {
         $resp = false;
         $base = new BaseDatos();
-        $sql = "INSERT INTO auto(Patente, Marca, Modelo, DniDuenio) VALUES('".$this->getPatente()."', '".$this->getMarca()."', ".$this->getModelo().",'".$this->getDniDuenio()."');";
-        
+        echo "<p> Patente: ".$this->getPatente()."</p> <p> Marca: ".$this->getMarca()."</p> <p> Modelo: ".$this->getModelo()."</p> <p> DniDuenio: ".$this->getNroDni()."</p>";
+        $sql = "INSERT INTO `auto` (Patente, Marca, Modelo, DniDuenio) VALUES('".$this->getPatente()."', '".$this->getMarca()."', ".$this->getModelo().",'".$this->getNroDni()."');";
+        echo "<p> Modelo:  ".$this->getModelo()."</p>";
+        echo "<p> DNI:  ". $this->getNroDni()."</p>";
+        echo "<br>";
+        echo "<p> SQL:  ".$sql."</p>";
         if ($base->Iniciar()) {
+           
             if ($base->Ejecutar($sql)) {
                 $resp = true;
+                echo "<p> ejecuta </p>";
             } else {
                 $this->setMensajeOperacion("Auto->insertar: ".$base->getError());
             }
@@ -104,7 +110,7 @@ class Auto extends BaseDatos {
     public function modificar() {
         $resp = false;
         $base = new BaseDatos();
-        $sql = "UPDATE auto SET marca='".$this->getMarca()."', modelo='".$this->getModelo()."' WHERE patente='".$this->getPatente()."'";
+        $sql = "UPDATE `auto` SET marca='".$this->getMarca()."', modelo='".$this->getModelo()."' WHERE patente='".$this->getPatente()."'";
         
         if ($base->Iniciar()) {
             if ($base->Ejecutar($sql)) {
@@ -121,7 +127,7 @@ class Auto extends BaseDatos {
     public function eliminar() {
         $resp = false;
         $base = new BaseDatos();
-        $sql = "DELETE FROM auto WHERE patente='".$this->getPatente()."'";
+        $sql = "DELETE FROM `auto` WHERE patente='".$this->getPatente()."'";
         
         if ($base->Iniciar()) {
             if ($base->Ejecutar($sql)) {
@@ -136,9 +142,10 @@ class Auto extends BaseDatos {
     }
 
     public function listar($parametro="") {
+        
         $arreglo = array();
         $base = new BaseDatos();
-        $sql = "SELECT * FROM auto ";
+        $sql = "SELECT * FROM `auto` ";
         
         if ($parametro != "") {
             $sql .= ' WHERE '.$parametro;
@@ -160,6 +167,6 @@ class Auto extends BaseDatos {
     }
 
     public function __toString() {
-        return "Patente: {$this->getPatente()}Marca:{$this->getMarca()}Modelo:{$this->getModelo()} DniDuenio:{$this->getDniDuenio()}";
+        return "Patente: {$this->getPatente()}Marca:{$this->getMarca()}Modelo:{$this->getModelo()} NroDni:{$this->getNroDni()}";
     }
 }

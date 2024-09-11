@@ -18,40 +18,28 @@ $datos = data_submitted();
 
 $abmAuto = new AbmAuto();
 $abmPersona = new AbmPersona();
-$patente = ["patente" => $datos["patente"]];
-$dni = ["dniDuenio" => $datos["dniDuenio"]];
-
 $auto = new Auto();
 
 
-if(empty($abmPersona->buscar($dni))){
+if(empty($abmPersona->buscar($datos))){
    
     echo "<div class='respPersonaNoCreada'>
             La persona no se encuentra registrada en la base de datos. 
             <a href='NuevoPersona.php'>Cargar nueva persona</a>
          </div>";
 } else{
-    if(isset($datos)){
+    if(!empty($datos)){
         //print_r($datos);
        // print_r($abmAuto->buscar($patente["patente"]));
-        $patente = $patente["patente"];
-        echo $patente ."<br>";
-        //print_r($abmAuto->buscar($patente)[0]);
-        if(empty($abmAuto->buscar($patente))){
-            echo "<div class='respPersonaCreada'>
-                Auto creado con éxito🥳 ya que es un auto nuevo
-                </div>";
+        // echo $patente ."<br>";
+        if(empty($abmAuto->buscar($datos))){
+                $abmAuto->alta($datos);
+             echo "<div class='registroAutoExito'> Se registro el auto con exito. </div>";
         }else{
-            echo "entro 2";
-            echo "<div class='respPersonaNoCreada'>
-                    La patente ya esta registrada en la base de datos. 😔
-                 </div>";
+            echo "<div class='respPersonaNoCreada'> La patente ya esta registrada en la base de datos. 😔 </div>";
         }
     }else{
-        echo "<div class='respPersonaNoCreada'>
-        No llegaron los datos.
-        print_r($datos)
-        </div>";  
+        echo "<div class='respPersonaNoCreada'> No llegaron los datos. </div>";  
     }
 }
 

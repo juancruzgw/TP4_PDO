@@ -10,8 +10,8 @@
             <input type="text" class="form-control" id="marca" name="marca">
             <label for="modelo">Modelo</label>
             <input type="text" class="form-control" id="modelo" name="modelo">
-            <label for="dniDuenio">DNI Dueño</label>
-            <input type="text" class="form-control" id="dniDuenio" name="dniDuenio">
+            <label for="NroDni">DNI Dueño</label>
+            <input type="text" class="form-control" id="NroDni" name="NroDni">
         </div>
         <button type="submit" class="btn btn-primary">Guardar</button>
     </form>

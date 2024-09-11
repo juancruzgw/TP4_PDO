@@ -22,7 +22,7 @@
             <p>Patente: {$autoEncontrado->getPatente()}</p>
             <p>marca: {$autoEncontrado->getMarca()}</p>
             <p>modelo:{$autoEncontrado->getModelo()}</p>
-            <p>dni dueño:{$autoEncontrado->getDniDuenio()}</p>
+            <p>dni dueño:{$autoEncontrado->getNroDni()}</p>
             </div>";
         }else{
             echo "<h2>Auto no encontrado</h2>";

@@ -36,7 +36,7 @@
                     <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/buscarAuto.php">Buscar Autos</a>
                 </li>
                 <li class="nav-item m-2">
-                    <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/listaPersona.php">Listar Autos</a>
+                    <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/listaPersona.php">Listar Personas</a>
                 </li>
                 <li class="nav-item m-2">
                     <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/nuevaPersona.php">Registrar Persona</a>
