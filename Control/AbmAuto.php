@@ -106,12 +106,16 @@ class AbmAuto{
      */
     public function modificacion($param) {
         $resp = false;
+
         if ($this->seteadosCamposClaves($param)) {
             $elObjtTabla = $this->cargarObjeto($param);
+
             if ($elObjtTabla != null && $elObjtTabla->modificar()) {
                 $resp = true;
             }
+            
         }
+
         return $resp;
     }
 

@@ -113,14 +113,18 @@ class Auto extends BaseDatos {
         $sql = "UPDATE `auto` SET marca='".$this->getMarca()."', modelo='".$this->getModelo()."' WHERE patente='".$this->getPatente()."'";
         
         if ($base->Iniciar()) {
+
             if ($base->Ejecutar($sql)) {
                 $resp = true;
+                
             } else {
                 $this->setMensajeOperacion("Auto->modificar: ".$base->getError());
             }
+
         } else {
             $this->setMensajeOperacion("Auto->modificar: ".$base->getError());
         }
+
         return $resp;
     }
 
