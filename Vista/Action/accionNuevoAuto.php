@@ -1,34 +1,62 @@
 <?php
 
-include '../Estructura/Header.php';
-include '../../utils/utils.php';
-include '../../modelo/Persona.php';
-include '../../Modelo/Auto.php';
-include '../../Control/AbmAuto.php';
-include '../../Control/AbmPersona.php';
+include_once "../Estructura/Header.php";
 
-/**Ejercicio 5 – 
-accionNuevoAuto.php que cargue un nuevo registro en la tabla auto de la base de datos. Se debe chequear
-antes que la persona duenia del auto ya se encuentre cargada en la base de datos, de no ser asi 
-mostrar un link a la pagina que permite carga una nueva persona. 
-Se debe mostrar un mensaje que indique si se pudo o no cargar los datos Utilizar css y validaciones javaScript cuando crea conveniente. Recordar usar la capa de
-control antes generada, no se puede acceder directamente a las clases del ORM. */
+include_once "../../utils/utils.php";
+include_once "../../modelo/Persona.php";
+include_once '../../Modelo/Auto.php';
+include_once '../../Control/AbmAuto.php';
+include_once '../../Control/AbmPersona.php';
 
 $datos = data_submitted();
-
 $abmAuto = new AbmAuto();
 $abmPersona = new AbmPersona();
-$auto = new Auto();
 
-print_r($datos);
+
+try {
+    if (!empty($abmPersona->buscar($datos))) {
+        
+        if ($datos['patente'] !== "null" && $datos['marca'] !== "null" && $datos['modelo'] !== "null" && $datos['NroDni'] !== "null") {
+            $datos['dniDuenio'] = $datos['NroDni'];
+            echo "<div class='datosAuto'> Datos del auto: </div>";
+
+            if (empty($abmAuto->buscar($datos))) {
+                $abmAuto->alta($datos);
+                echo "<div class='registroAutoExito'> Se registró el auto con éxito. </div>";
+            } else {
+                throw new Exception("La patente ya está registrada en la base de datos.");
+            }
+            
+        } else {
+            throw new Exception("No llegaron los datos.");
+        }
+        
+    } else {
+        echo "<div class='respPersonaNoCreada'> La persona no se encuentra registrada en la base de datos.  
+                <a href='NuevoPersona.php'>Cargar nueva persona</a>
+            </div>";
+    }
+    
+} catch (PDOException $ex) {
+    echo "Error en la base de datos: " . $ex->getMessage();
+} catch (Exception $ex) {
+    echo "Ocurrió un error: " . $ex->getMessage();
+}
+
+
+
+/*
+- Codigo Funcional
 if(empty($abmPersona->buscar($datos))){
    
     echo "<div class='respPersonaNoCreada'>
             La persona no se encuentra registrada en la base de datos. 
             <a href='NuevoPersona.php'>Cargar nueva persona</a>
          </div>";
+
 } else{
     if($datos['patente'] !== "null" && $datos['marca'] !== "null" && $datos['modelo'] !== "null" && $datos['NroDni'] !== "null"){
+        
         $datos['dniDuenio'] = $datos['NroDni'];
         echo "<div class='datosAuto'> Datos del auto: </div>";
         if(empty($abmAuto->buscar($datos))){
@@ -41,12 +69,7 @@ if(empty($abmPersona->buscar($datos))){
         echo "<div class='respPersonaNoCreada'> No llegaron los datos. </div>";  
     }
 }
+*/
 
-
-
- /*if (!empty($datos)) {
-    echo "<h2>Se han ingresado los siguientes datos:</h2>";
-    print_r($datos);
-} else{
-    echo "No se han ingresado datos";
-}*/
+include "../Estructura/Footer.php";
+?>

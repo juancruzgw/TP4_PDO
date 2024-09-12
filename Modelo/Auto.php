@@ -150,7 +150,6 @@ class Auto extends BaseDatos {
         if ($parametro != "") {
             $sql .= ' WHERE '.$parametro;
         }
-        echo "<h1> $sql </h1>";
         $res = $base->Ejecutar($sql);
         
         if($res > -1) {

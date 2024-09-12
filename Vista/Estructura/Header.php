@@ -4,10 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Header</title>
-
-    <link rel="stylesheet" href="Assets/styles.css?v=2.2">
-    <link rel="stylesheet" href="../Assets/styles.css?v=2.2">
-
+    <!--- --->
+    <link rel="stylesheet" href="../../../TP4_PDO/Vista/Assets/styles.css?v=2.2">
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
@@ -29,7 +28,7 @@
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul class="navbar-nav ">
                 <li class="nav-item m-2">
-                    <a class="nav-link btn btn-dark mx-1 text-white" href="./">Home</a>
+                    <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/Index.php">Home</a>
                 </li>
                 <li class="nav-item m-2">
                     <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/VerAutos.php">Ver Autos</a>
@@ -43,11 +42,14 @@
                 <li class="nav-item m-2">
                     <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/nuevaPersona.php">Registrar Persona</a>
                 </li>
-                <li class="nav-item m-2" href="../../../TP4_PDO/Vista/NuevoAuto.php"> 
-                    <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/NuevoAuto.php">registrar auto</a>
+                <li class="nav-item m-2"> 
+                    <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/NuevoAuto.php">Registrar auto</a>
                 </li>
-                <li class="nav-item m-2" href="../../../TP4_PDO/Vista/NuevoAuto.php"> 
+                <li class="nav-item m-2"> 
                     <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/cambioDuenio.php">Cambio de dueño del auto</a>
+                </li>
+                <li class="nav-item m-2"> 
+                    <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/buscarPersona.html">Modificar usuario</a>
                 </li>
             </ul>
         </div>

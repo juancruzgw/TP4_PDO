@@ -1,23 +1,69 @@
-<?php
-
-function data_submitted()
-{
-    $datos = [];
+<?php 
+function data_submitted() {
+    $_AAux= array();
     if (!empty($_POST))
-        $datos = $_POST;
-    elseif (!empty($_GET)) {
-        $datos = $_GET;
-    }
+        $_AAux =$_POST;
+        else
+            if(!empty($_GET)) {
+                $_AAux =$_GET;
+            }
+        if (count($_AAux)){
+            foreach ($_AAux as $indice => $valor) {
+                if ($valor=="")
+                    $_AAux[$indice] = 'null' ;
+            }
+        }
+        return $_AAux;
+        
+}
+function verEstructura($e){
+    echo "<pre>";
+    print_r($e);
+    echo "</pre>"; 
+}
 
-    if (!empty($_FILES)) {
-        $datos = array_merge($datos, $_FILES);
-    }
 
-    if (count($datos)) {
-        foreach ($datos as $indice => $valor) {
-            if ($valor == "")
-                $datos[$indice] = 'null';
+spl_autoload_register(function ($class_name) {
+    //echo "class ".$class_name ;
+    $directorys = array(
+        $_SESSION['ROOT'].'Modelo/',
+        $_SESSION['ROOT'].'Modelo/conector/',
+        $_SESSION['ROOT'].'Control/',
+        //  $GLOBALS['ROOT'].'util/class/', 
+    );
+    //print_object($directorys) ;
+
+    $i = 0;
+    $LoEncontro = false;
+    while($i < count($directorys) && !$LoEncontro){
+        if(file_exists($directory[$i] . $class_name . '.php')){
+            $LoEncontro = require_once($directory[$i] . $class_name . '.php');
+        } else {
+            $i++;
         }
     }
-    return $datos;
+    return $LoEncontro;
+});
+
+
+/*
+function __autoload($class_name){
+    //echo "class ".$class_name ;
+    $directorys = array(
+        $_SESSION['ROOT'].'Modelo/',
+        $_SESSION['ROOT'].'Modelo/conector/',
+        $_SESSION['ROOT'].'Control/',
+      //  $GLOBALS['ROOT'].'util/class/',
+    );
+    //print_object($directorys) ;
+    foreach($directorys as $directory){
+        if(file_exists($directory.$class_name . '.php')){
+            // echo "se incluyo".$directory.$class_name . '.php';
+            require_once($directory.$class_name . '.php');
+            
+        }
+    }
 }
+*/
+
+?>

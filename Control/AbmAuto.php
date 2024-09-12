@@ -139,8 +139,25 @@ class AbmAuto{
         }
         $obj = new Auto();
         $arreglo = $obj->listar($where);
-        echo "<h3> $where </h3>";
         return $arreglo;
+    }
+
+    public function obtenerDatos($param){
+        $where = " true ";
+        if ($param <> NULL) {
+            if (isset($param['patente']))
+                $where .= " and patente ='" . $param['patente'] . "'";
+            if (isset($param['marca']))
+                $where .= " and marca ='" . $param['marca'] . "'";
+            if (isset($param['DniDuenio'])){
+               $where .= " and DniDuenio =" . $param['DniDuenio'];
+            }
+            if (isset($param['modelo']))
+                $where .= " and modelo ='" . $param['modelo'] . "'";
+        }
+        $obj = new Auto();
+        $arreglo = $obj->listar($where);
+        return ["patente" => $arreglo[0]->getPatente(), "marca" => $arreglo[0]->getMarca(), "modelo" => $arreglo[0]->getModelo(), "DniDuenio" => $arreglo[0]->getNroDni()];
     }
 }
 ?>

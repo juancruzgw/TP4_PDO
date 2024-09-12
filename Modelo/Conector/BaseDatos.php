@@ -25,6 +25,7 @@ class BaseDatos extends PDO {
         $this->indice =0;
         
         $dns = $this->engine.':dbname='.$this->database.";host=".$this->host;
+        
         try {
            parent::__construct( $dns, $this->user, $this->pass,array(PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8'));
            $this->conec=true;
@@ -130,7 +131,7 @@ class BaseDatos extends PDO {
        }
        return $id;
    }
-   
+
    /**
     * Devuelve la cantidad de filas afectadas por la ejecucion SQL. Si el valor es <0 no se pudo realizar la opercion
     * @return integer 
