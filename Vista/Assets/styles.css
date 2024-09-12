@@ -68,25 +68,6 @@
     
     
 }
-/*
-@keyframes colorChange {
-    0% {
-        color: #000000; 
-    }
-    25% {
-        color: #707aff; 
-    }
-    50% {
-        color: #000000; 
-    }
-    75% {
-        color: #134736; 
-    }
-    100% {
-        color: #ffffff; 
-    }
-}*/
-
 
 .btn-ingrese{
     background-color: #007BFF; /* Color azul */
@@ -128,4 +109,31 @@
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
     margin-top: 20px; /* Margen superior */
     background-color: rgb(151, 28, 28);
+}
+
+.contenedorItems{
+    height: 7rem;
+    display: flex;
+    align-items: center;
+    align-items: start;
+    align-content: center;
+    justify-content: center;
+}
+
+
+.cambioDatos{
+    height: 50%;
+}
+
+.NocambioDatos{
+
+}
+
+.personaNoEncontrada{
+
+
+}
+
+.ingresoErroneoDatos{
+
 }
