@@ -34,6 +34,7 @@ class AbmAuto{
         if (array_key_exists('patente', $param) && array_key_exists('marca', $param) && array_key_exists('NroDni', $param) && array_key_exists('modelo', $param)) {
             $obj = new Auto();
             $obj->setear($param['patente'], $param['marca'], $param['modelo'], $param['NroDni']);
+           
         }
         return $obj;
     }
@@ -74,10 +75,8 @@ class AbmAuto{
         $resp = false;
         //$param['patente'] = null; // Asumiendo que se autogenera o se maneja de otra manera
         $elObjtTabla = $this->cargarObjeto($param);
-        echo "entra ID 1 <br>";
         if ($elObjtTabla != null && $elObjtTabla->insertar()) {
             $resp = true;
-            echo "lo inserta ---------";
         }
         return $resp;
     }
@@ -139,7 +138,6 @@ class AbmAuto{
                 $where .= " and modelo ='" . $param['modelo'] . "'";
         }
         $obj = new Auto();
-        echo "<h2>where: $where</h2>";
         $arreglo = $obj->listar($where);
         return $arreglo;
     }

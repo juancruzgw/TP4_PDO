@@ -22,6 +22,8 @@ class Auto extends BaseDatos {
         $this->setMarca($marca);
         $this->setModelo($modelo);
         $this->setNroDni($dniNuevoDuenio);
+
+
     }
 
     public function getMensajeOperacion() {
@@ -87,17 +89,11 @@ class Auto extends BaseDatos {
     public function insertar() {
         $resp = false;
         $base = new BaseDatos();
-        echo "<p> Patente: ".$this->getPatente()."</p> <p> Marca: ".$this->getMarca()."</p> <p> Modelo: ".$this->getModelo()."</p> <p> DniDuenio: ".$this->getNroDni()."</p>";
         $sql = "INSERT INTO `auto` (Patente, Marca, Modelo, DniDuenio) VALUES('".$this->getPatente()."', '".$this->getMarca()."', ".$this->getModelo().",'".$this->getNroDni()."');";
-        echo "<p> Modelo:  ".$this->getModelo()."</p>";
-        echo "<p> DNI:  ". $this->getNroDni()."</p>";
-        echo "<br>";
-        echo "<p> SQL:  ".$sql."</p>";
         if ($base->Iniciar()) {
            
             if ($base->Ejecutar($sql)) {
                 $resp = true;
-                echo "<p> ejecuta </p>";
             } else {
                 $this->setMensajeOperacion("Auto->insertar: ".$base->getError());
             }
@@ -110,7 +106,7 @@ class Auto extends BaseDatos {
     public function modificar() {
         $resp = false;
         $base = new BaseDatos();
-        $sql = "UPDATE `auto` SET marca='".$this->getMarca()."', modelo='".$this->getModelo()."' WHERE patente='".$this->getPatente()."'";
+        $sql = "UPDATE `auto` SET marca='{$this->getMarca()}', modelo='{$this->getModelo()}', DniDuenio = {$this->getNroDni()} WHERE patente='{$this->getPatente()}'";
         
         if ($base->Iniciar()) {
 

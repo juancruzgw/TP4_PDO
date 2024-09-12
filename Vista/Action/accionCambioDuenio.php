@@ -27,16 +27,23 @@ $abmAuto = new AbmAuto();
 
 $datos = data_submitted();
 
-print_r($datos);
 
-if(isset($datos['patente']) && isset($datos['NroDni'])){
-    if(!empty($abmAuto->buscar($datos)[0]) && !empty($abmPersona->buscar($datos)[0])){
-        echo "se modifico con exito";
-    }else{
-        echo "No se encontro a la persona a cargo";
+if($datos['patente'] !== "null" && $datos['NroDni'] !== 'null'){
+    
+    if(!empty($auto = $abmAuto->buscar($datos)[0]) && !empty($abmPersona->buscar($datos))){
+        $datos['accion'] = 'editar';
+        $datos['marca'] = $auto->getMarca();
+        $datos['modelo'] = $auto->getModelo();
+        if($abmAuto->abm($datos)){
+            echo "Se cambio el dueño del auto";
+        }else{
+            echo "No se pudo cambiar el dueño del auto";
+        }
+    } else {
+        echo "No se encontro el auto o la persona";
     }
 }else{
-    "no se ingresaron correctamente los datos";
+    echo "no se ingresaron correctamente los datos";
 }
 
 
