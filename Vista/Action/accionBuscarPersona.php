@@ -34,7 +34,6 @@ try {
          echo "<input type='text' name='Domicilio' value='".$persona['Domicilio']."'class='form-control'>";
          echo "<input type='submit' value='Actualizar' class='btn btn-primary'>";
          echo "</div>";
-
       } else {
          throw new Exception("<div class=''>no existe esta persona</div>");
       }
