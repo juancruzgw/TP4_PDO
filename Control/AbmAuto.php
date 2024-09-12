@@ -103,13 +103,13 @@ class AbmAuto{
      * @param array $param
      * @return boolean
      */
+
     public function modificacion($param) {
 
         $resp = false;
 
         if ($this->seteadosCamposClaves($param)) {
             $elObjtTabla = $this->cargarObjeto($param);
-
             if ($elObjtTabla != null && $elObjtTabla->modificar()) {
                 $resp = true;
             }
@@ -139,6 +139,7 @@ class AbmAuto{
         }
         $obj = new Auto();
         $arreglo = $obj->listar($where);
+        echo "<h3> $where </h3>";
         return $arreglo;
     }
 }

@@ -20,7 +20,7 @@ $abmAuto = new AbmAuto();
 $abmPersona = new AbmPersona();
 $auto = new Auto();
 
-
+print_r($datos);
 if(empty($abmPersona->buscar($datos))){
    
     echo "<div class='respPersonaNoCreada'>
@@ -28,10 +28,9 @@ if(empty($abmPersona->buscar($datos))){
             <a href='NuevoPersona.php'>Cargar nueva persona</a>
          </div>";
 } else{
-    if(!empty($datos)){
-        //print_r($datos);
-       // print_r($abmAuto->buscar($patente["patente"]));
-        // echo $patente ."<br>";
+    if($datos['patente'] !== "null" && $datos['marca'] !== "null" && $datos['modelo'] !== "null" && $datos['NroDni'] !== "null"){
+        $datos['dniDuenio'] = $datos['NroDni'];
+        echo "<div class='datosAuto'> Datos del auto: </div>";
         if(empty($abmAuto->buscar($datos))){
                 $abmAuto->alta($datos);
              echo "<div class='registroAutoExito'> Se registro el auto con exito. </div>";

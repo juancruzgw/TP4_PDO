@@ -9,7 +9,7 @@
             <label for="marca">Marca</label>
             <input type="text" class="form-control" id="marca" name="marca">
             <label for="modelo">Modelo</label>
-            <input type="text" class="form-control" id="modelo" name="modelo">
+            <input type="number" class="form-control" id="modelo" name="modelo">
             <label for="NroDni">DNI Dueño</label>
             <input type="text" class="form-control" id="NroDni" name="NroDni">
         </div>
