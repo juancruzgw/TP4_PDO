@@ -15,7 +15,6 @@
     <!---jquery--->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"type="module"></script>
-    <script src="../Assets/validaciones.js" type="module"></script>
     <!---jquery--->
 
 </head>
@@ -31,28 +30,28 @@
         <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
             <ul class="navbar-nav ">
                 <li class="nav-item m-2">
-                    <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/Index.php">Home</a>
+                    <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/Index.php">Home <i class="bi bi-house"></i></a>
                 </li>
                 <li class="nav-item m-2">
-                    <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/VerAutos.php">Ver Autos</a>
+                    <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/VerAutos.php">Ver Autos <i class="bi bi-car-front"></i></a>
                 </li>
                 <li class="nav-item m-2">
-                    <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/buscarAuto.php">Buscar Autos</a>
+                    <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/buscarAuto.php">Buscar Autos <i class="bi bi-car-front"></i></a>
                 </li>
                 <li class="nav-item m-2">
-                    <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/listaPersona.php">Listar Personas</a>
+                    <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/listaPersona.php">Listar Personas <i class="bi bi-person"></i></a>
                 </li>
                 <li class="nav-item m-2">
-                    <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/nuevaPersona.php">Registrar usuario</a>
+                    <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/nuevaPersona.php">Registrar usuario <i class="bi bi-person"></i></a>
                 </li>
                 <li class="nav-item m-2"> 
-                    <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/NuevoAuto.php">Registrar auto</a>
+                    <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/NuevoAuto.php">Registrar auto <i class="bi bi-car-front"></i></a>
                 </li>
                 <li class="nav-item m-2"> 
-                    <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/cambioDuenio.php">Cambio de dueño del auto</a>
+                    <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/cambioDuenio.php">Cambio de dueño del auto <i class="bi bi-car-front"></i></a>
                 </li>
                 <li class="nav-item m-2"> 
-                    <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/buscarPersona.html">Modificar usuario</a>
+                    <a class="nav-link btn btn-dark mx-1 text-white" href="../../../TP4_PDO/Vista/buscarPersona.html">Modificar usuario <i class="bi bi-pencil"></i></a>
                 </li>
             </ul>
         </div>

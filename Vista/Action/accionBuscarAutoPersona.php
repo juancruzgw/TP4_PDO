@@ -7,12 +7,10 @@ echo "<div class='container container-supp'>";
 $abm = new AbmAuto();
 $datos = data_submitted();
 $autos = $abm->obtenerDatos($datos);
-
 try{
     
     if(isset($autos[0])){
         echo "<h2 class='text-center'>Resultado de la busqueda</h2>";
-    
         foreach ($autos as $auto) {
             $autoEncontrado = $auto;
             echo "<div class='respuestaBuscarAuto'>

@@ -21,9 +21,8 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" type="module"></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"
         type="module"></script>
-    <script src="../Assets/validaciones.js" type="module"></script>
+    <script src="../../Vista/Assets/validaciones.js" type="module"></script>
     <!---jquery--->
-
 </head>
 
 <body>
@@ -81,7 +80,8 @@
             <div class="form-group">
                 <h2 class="mb-4">Modificar Usuario</h2>
                 <label for="NroDni" style="color: #2196F3;font-size: 20px;">Ingrese un DNI </label>
-                <input type="number" name="NroDni" id="NroDni" class="form-control mt-2" value="45882251">
+                <input type="number" name="NroDni" id="NroDni" class="form-control mt-2" placeholder="Número de DNI."
+                    required>
             </div>
             <button type="submit" class="btn btn-primary btn-block mt-4">
                 Buscar <i class="bi bi-pencil"></i>

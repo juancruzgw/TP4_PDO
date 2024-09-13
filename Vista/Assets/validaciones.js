@@ -1,3 +1,6 @@
+alert("Hola");
+
+
 $.validator.addMethod("patenteValida", function(value){
     return /^[A-Za-z]{3}\s[0-9]{3}$/.test(value) || /^[A-Za-z]{3}[0-9]{3}$/.test(value);
 }, "Tiene que ser una patente valida");
@@ -51,6 +54,12 @@ $("#formularioCrearPersona").validate({
             required: true,
             minlength: 5,
             maxlength: 50
+        },
+        DniDuenio:{
+            required: true,
+            digits: true,
+            minlength: 7,
+            maxlength: 8
         }
     }, messages:{
         Nombre:{
@@ -83,6 +92,12 @@ $("#formularioCrearPersona").validate({
             required: "Debe ingresar el domicilio",
             minlength: "El domicilio debe tener al menos 5 caracteres",
             maxlength: "El domicilio debe tener menos de 50 caracteres"
+        },
+        DniDuenio:{
+            required: "Debe ingresar el DNI",
+            digits: "El DNI debe ser un numero",
+            minlength: "El DNI debe tener al menos 7 caracteres",
+            maxlength: "El DNI debe tener menos de 8 caracteres"
         }
     }
 })

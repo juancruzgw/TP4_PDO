@@ -1,9 +1,9 @@
 <?php
 include_once "./Estructura/Header.php";
-include './../Modelo/Auto.php';
-include './../Control/AbmAuto.php';
 ?>
+  <script href='../Vista/Assets/validaciones.js'>
 
+  </script>
     <div class="container cont-form">
    
         <div class="contenedor-form">
@@ -13,9 +13,9 @@ include './../Control/AbmAuto.php';
               <div class="form-group ">
                 <label style="color: #2196F3;font-size: 20px;"> <i class="bi bi-car-front"></i> Ingresá la Patente del auto </label>
                 <label for="patente"></label>
-                <input  type="text" name="patente" id="patente" class="form-control mt-2" value="Porsche 718">
+                <input  type="text" name="patente" id="patente" class="form-control mt-2" placeholder="ABC 123">
               </div>
-              <button type="submit" class="btn btn-primary btn-block mt-4">Buscar<i class="bi bi-search"></i></button>
+              <button type="submit" class="btn btn-primary btn-block mt-4">Buscar. <i class="bi bi-search"></i></button>
        </form>
 
         </div>
