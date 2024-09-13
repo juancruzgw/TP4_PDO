@@ -3,14 +3,13 @@ include_once "../Estructura/Header.php";
 include_once "../../configuracion.php";
 
 
-echo "<div class='container'>";
+echo "<div class='container cont-form'>";
 
 $abm = new AbmPersona();
 $datos = data_submitted();
 $dni = ["NroDni" => $datos["NroDni"]];
 $persona = new Persona();
 
-echo "<div class ='container cont-form'>";
 try {
     if(isset($datos)){
         if(empty($abm->buscar($dni))){
@@ -26,20 +25,14 @@ try {
                  </div>";
         }  
     }else{
-        throw new exception("<div class='modalDatosIncorrectos style='font-weight: bold;'> No llegaron los datos. </div>");  
+        throw new exception("<div class='modalDatosIncorrectos'>No llegaron los datos.</div>");  
     }
+
 }catch (PDOException $ex) {
-  echo "<div class ='modalDatosIncorrectos'".$ex->getMessage()."</div>";
+  echo "<div class ='modalDatosIncorrectos'>".$ex->getMessage()."</div>";
 } catch (Exception $ex) {
     echo $ex->getMessage();
 }
-
-echo "</div>";
-echo "</div>";
-echo "</div>";
-
-include_once "../Estructura/Footer.php";
-
 
 
 /*
@@ -63,4 +56,9 @@ if(isset($datos)){
     </div>";  
 }
 */
+
+echo "</div>";
+
+include_once "../Estructura/Footer.php";
+
 ?>

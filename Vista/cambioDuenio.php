@@ -12,9 +12,11 @@
             <input type="text" class="form-control" id="NroDni" name="NroDni" >
 
         </div>
-        <button type="submit" class="btn btn-primary mt-4">Guardar</button>
+        <button type="submit" class="btn btn-primary mt-4">Guardar <i class="bi bi-save"></i></button>
     </form>
-
+    <script>
+        alert("Para cambiar el dueño de un auto, ingrese el numero de patente del auto y el numero de documento de la persona a la que se le quiere cambiar el dueño");
+    </script>
 </div>
 
 

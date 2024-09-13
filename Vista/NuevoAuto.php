@@ -13,7 +13,7 @@
             <label for="NroDni" style="color: #2196F3;font-size: 20px; margin-left:10px">DNI Dueño</label>
             <input type="text" class="form-control" id="NroDni" name="NroDni">
         </div>
-        <button type="submit" class="btn btn-primary mt-4">Guardar</button>
+        <button type="submit" class="btn btn-primary mt-4">Guardar <i class="bi bi-save"></i></button>
     </form>
 </div>
 

@@ -1,9 +1,6 @@
 <?php
 include_once "./Estructura/Header.php";
 ?>
-  <script href='../Vista/Assets/validaciones.js'>
-
-  </script>
     <div class="container cont-form">
    
         <div class="contenedor-form">
@@ -17,8 +14,6 @@ include_once "./Estructura/Header.php";
               </div>
               <button type="submit" class="btn btn-primary btn-block mt-4">Buscar. <i class="bi bi-search"></i></button>
        </form>
-
         </div>
     </div>
-
 <?php include_once "./Estructura/Footer.php"?>

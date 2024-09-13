@@ -4,9 +4,9 @@
     <div class="container text-center futer">
         <ul class="list-inline">
             <li class="list-inline-item">Juan Cruz</li>
-            <li class="list-inline-item">Miguel Soto</li>
-            <li class="list-inline-item">Valentin Bustos</li>
-            <li class="list-inline-item">Diego Rios</li>
+            <li class="list-inline-item">Miguel</li>
+            <li class="list-inline-item">Valentin </li>
+            <li class="list-inline-item">Diego</li>
         </ul>
     </div>
 </footer>
