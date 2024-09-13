@@ -1,6 +1,6 @@
-<?php
-include 'Estructura/Header.php';
-include '../configuracion.php';
+<?php 
+include_once "./Estructura/Header.php"; 
+include_once "../configuracion.php";
 
 $abmAuto = new AbmAuto();
 $abmPersona = new AbmPersona();

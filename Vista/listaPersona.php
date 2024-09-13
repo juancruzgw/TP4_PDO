@@ -1,6 +1,6 @@
 <?php
-
 include 'Estructura/Header.php';
+
 include '../configuracion.php';
 
 $abmPersona = new AbmPersona();

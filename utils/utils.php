@@ -29,7 +29,6 @@ spl_autoload_register(function ($class_name){
         $_SESSION['ROOT'].'Modelo/Conector/',
         $_SESSION['ROOT'].'Control/',
     );
-
     $i = 0;
     $LoEncontro = false;
     while($i < count($directorys) && !$LoEncontro){
@@ -42,4 +41,3 @@ spl_autoload_register(function ($class_name){
     }
     return $LoEncontro;
 });
-?>
