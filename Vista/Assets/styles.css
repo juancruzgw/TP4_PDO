@@ -149,7 +149,7 @@
 /* Aplicamos la animación al div */
 .modalDatosCorrectos {
     animation: entradaDos 1s ease-out;
-    background-color: #cc2727;
+    background-color: #4CAF50 ;
     padding: 20px;
     border-radius: 5px;
     margin: 20px;
