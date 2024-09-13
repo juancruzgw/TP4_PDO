@@ -9,10 +9,8 @@ $abmPersona = new AbmPersona();
 // Obtener todas las personas
 $personas = $abmPersona->buscar(null);
 
-?>
-    <div class="container contenedor rounded shadow mb-3">
-        <h1 class="my-4">Listado de Autos</h1>
-        <?php
+    echo "<div class='container contenedor rounded shadow mb-3'>";
+    echo "<h1 class='my-4'>Listado de Autos</h1>";
         if (count($personas) > 0) {
             echo "<table class='  table table-bordered'>
                   <thead class='thead-dark'>
@@ -52,11 +50,11 @@ $personas = $abmPersona->buscar(null);
         } else {
             echo '<div class="alert alert-danger m-3 w-50" role="alert" >No hay autos cargados en la base de datos.</div>';
         }
-        
-        ?>
-    </div>
+    
+    echo "</div>";
     
 
-    
-<?php include_once "./Estructura/Footer.php"?>
+include_once "./Estructura/Footer.php";
+
+?>
     

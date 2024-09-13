@@ -7,7 +7,6 @@ $abm = new AbmAuto();
 $datos = data_submitted();
 
 echo "<div class='container cont-form'>";
-echo "<div class='respuestaBuscarAuto'>";
 
 try{
     if($datos['patente'] == 'null'){
@@ -22,15 +21,14 @@ try{
         "<p>Dni dueño: ".$auto['DniDuenio']." </p>".
         "</div>";
     }else{
-        throw new Exception("<div class='modalDatosIncorrectos'>El auto no fue encontrado</div>");
+        throw new Exception("<div class='modalDatosIncorrectos' style='font-weight: bold;'>El auto no fue encontrado</div>");
     }
 }catch(PDOException $ex){
-    echo "<div class='modalDatosIncorrectos'>Hubo un error en la base de datos: " . $ex->getMessage()."</div>";
+    echo "<div class='modalDatosIncorrectos' style='font-weight: bold;'>Hubo un error en la base de datos:" . $ex->getMessage()."</div>";
 }catch(Exception $ex){
-    echo "<div class='modalDatosIncorrectos'>".$ex->getMessage()."</div>";
+    echo "<div class='modalDatosIncorrectos' style='font-weight: bold;'>".$ex->getMessage()."</div>";
 }
 
-echo "</div>";
 echo "</div>";
 
 include_once "../Estructura/Footer.php"

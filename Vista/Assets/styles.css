@@ -8,6 +8,16 @@
     margin-top: 15px;
     padding: 15px;
 }
+.container-supp {
+    min-height: 600px;
+    max-height: 50%;
+    background-color: #f8f9fa; 
+    max-width: 50%;
+    padding: 20px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; 
+}
 
 
 .cont-form {
@@ -17,12 +27,12 @@
     text-align: center;
     align-items: top;
     max-height: 50% !important;
-    background-color: #f8f9fa; /* Fondo claro */
+    background-color: #f8f9fa; 
     max-width: 50%;
-    padding: 20px; /* Espaciado interno */
-    border-radius: 10px; /* Bordes redondeados */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra */
-    margin-top: 20px; /* Margen superior */
+    padding: 20px; 
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px; 
 }
 
 .contenedor-form {
@@ -62,12 +72,22 @@
     
 }
 .respuestaBuscarAuto {
-    
-    border-radius: 5px;
+    margin: auto;
+    margin-top: 20px;
+    max-width: 50%;
+    padding: 26px;
+    border-radius: 15px;
     box-shadow: 0 0 10px rgb(85, 85, 85);
+    transition: 0.5s ease-in-out;
     
     
 }
+
+.respuestaBuscarAuto:hover{
+    transform: translateY(-10px);
+    scale: 1.1;
+}
+
 
 .btn-ingrese{
     background-color: #007BFF; /* Color azul */
@@ -122,8 +142,9 @@
 
 /* Aplicamos la animación al div */
 .modalDatosIncorrectos {
+    
     animation: entrada 1s ease-out;
-    background-color: #cc2727;
+    background-color: rgb(163, 33, 33);
     padding: 20px;
     border-radius: 5px;
     margin: 20px;
