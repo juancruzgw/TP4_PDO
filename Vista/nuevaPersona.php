@@ -1,8 +1,8 @@
 <?php include_once "./Estructura/Header.php";?>
 
-<div class="container cont-form">
+<div class="container contenedor rounded shadow mb-3">
     <form id="formularioCrearPersona" method="post" action="../Vista/Action/accionCrearPersona.php">
-           
+            <h2 class="mb-4">Registrar usuario</h2>
             <div class="form-group mt-2">
                 <label for="Nombre" style="color: #2196F3;font-size: 20px;">Ingrese un nombre</label>
                 <input type="text" name="Nombre" id="Nombre" class="form-control">

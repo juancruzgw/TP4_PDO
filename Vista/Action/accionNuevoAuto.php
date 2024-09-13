@@ -33,7 +33,7 @@ try {
         
     } else {
         echo "<div class='modalDatosIncorrectos'> La persona no se encuentra registrada en la base de datos. 
-                <a href='NuevoPersona.php' class='link'>Cargar nueva persona</a>
+                <a href='../nuevaPersona.php' class='link'>Cargar nueva persona</a>
             </div>";
     }
     

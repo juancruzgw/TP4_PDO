@@ -4,7 +4,7 @@
 
     <form action="Action/accionCambioDuenio.php" method="post">
         <div class="form-group">
-
+            <h2 class="mb-4">Cambio de dueño del auto</h2>
             <label for="patente" style="color: #2196F3;font-size: 20px;" >Ingrese el numero de patente del auto</label>
             <input type="text" class="form-control" id="patente" name="patente" >
 
