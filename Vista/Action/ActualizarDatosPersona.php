@@ -39,5 +39,5 @@ if(isset($datos)){
 }
 */
 
-include "../Estructura/Footer.php";
+include_once "../Estructura/Footer.php";
 ?>

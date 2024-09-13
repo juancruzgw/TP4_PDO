@@ -1,5 +1,4 @@
 <?php 
-
 include '../Estructura/Header.php';
 include_once "../../configuracion.php";
 

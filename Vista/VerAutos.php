@@ -11,7 +11,6 @@ $abmPersona = new AbmPersona();
     <div class="container contenedor rounded shadow mb-3">
         <h1 class="my-4">Listado de Autos</h1>
         <?php
-
         $autos = $abmAuto->obtenerDatos(null);
         
         if (count($autos) > 0){
@@ -26,41 +25,25 @@ $abmPersona = new AbmPersona();
                   </thead>
                   <tbody>";
             echo "<pre>";
+
             foreach($autos as $auto){
                 $datos['NroDni'] = $auto['DniDuenio'];
 
                 $duenio = $abmPersona->obtenerDatos($datos);
-                echo "<h1> Auto </h1>";
-                if(isset($duenio[0])){
-                    echo "<h1> Dueño </h1>";
-                    echo "<pre>";
-                    print_r($duenio[0]);
-                    echo "</pre>";
-                } else {
-                    echo "<h1> Dueño no encontrado </h1>";
+                if(!empty($duenio)){
+                    $duenio = $duenio[0];
+                    echo "<tr>";
+                    echo "<td>" . $auto['patente'] . "</td>";
+                    echo "<td>" . $auto['marca'] . "</td>";
+                    echo "<td>" . $auto['modelo'] . "</td>";
+                    echo "<td>" . $duenio['Nombre'] . " " . $duenio['Apellido'] . "</td>";
                 }
             }
+            
             echo "</pre>";
         } else {
             echo '<div class="alert alert-danger m-3 w-50" role="alert" >No hay autos cargados en la base de datos.</div>';
         }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
         // if (count($autos) > 0) {
         //     echo "<table class='  table table-bordered'>

@@ -157,6 +157,7 @@ class AbmPersona{
             if (isset($param['Domicilio']))
                 $where .= " and domicilio = '" . $param['Domicilio'] . "'";
         }
+        
         $obj = new Persona();
         
         $arreglo = $obj->listar($where);

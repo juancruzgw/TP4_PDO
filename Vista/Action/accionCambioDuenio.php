@@ -1,6 +1,5 @@
 <?php 
 include_once "../Estructura/Header.php";
-
 include_once "../../configuracion.php";
 
 
@@ -63,6 +62,4 @@ try{
 echo "</div>";
 
 include_once "../Estructura/Footer.php";
-
-
 ?>

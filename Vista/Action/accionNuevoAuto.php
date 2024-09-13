@@ -69,5 +69,5 @@ if(empty($abmPersona->buscar($datos))){
 
 echo "</div>";
 
-include "../Estructura/Footer.php";
+include_once "../Estructura/Footer.php";
 ?>
