@@ -158,14 +158,15 @@ class AbmPersona{
                 $where .= " and domicilio = '" . $param['Domicilio'] . "'";
         }
         $obj = new Persona();
+        
         $arreglo = $obj->listar($where);
         $result = [];
-        if(!empty($arreglo)){
-           $result = ['NroDni' => $arreglo[0]->getNroDni(),'Nombre' => $arreglo[0]->getNombre(),'Apellido' => $arreglo[0]->getApellido(),'fechaNac' => $arreglo[0]->getFechaNac(),'Telefono' => $arreglo[0]->getTelefono(),'Domicilio' => $arreglo[0]->getDomicilio()];
-        } 
+        if (!empty($arreglo)) {
+            foreach ($arreglo as $persona) {
+            $result[] = ['NroDni' => $persona->getNroDni(),'Nombre' => $persona->getNombre(),'Apellido' => $persona->getApellido(),'fechaNac' => $persona->getFechaNac(),'Telefono' => $persona->getTelefono(),'Domicilio' => $persona->getDomicilio()];
+            }
+        }
         return $result;
     }
-
 }
-
 ?>

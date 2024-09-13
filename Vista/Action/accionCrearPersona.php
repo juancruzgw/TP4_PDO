@@ -2,9 +2,8 @@
 
 include_once "../Estructura/Header.php";
 
-include "../../utils/utils.php";
-include '../../Modelo/Persona.php';
-include '../../Control/AbmPersona.php';
+include_once "../../configuracion.php";
+
 
 echo "<div class='container cont-form'>";
 

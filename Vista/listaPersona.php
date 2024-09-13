@@ -1,8 +1,7 @@
 <?php
 
 include 'Estructura/Header.php';
-include '../modelo/Persona.php';
-include '../Control/AbmPersona.php';
+include '../configuracion.php';
 
 $abmPersona = new AbmPersona();
 

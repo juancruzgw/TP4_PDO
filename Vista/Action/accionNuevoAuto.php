@@ -1,12 +1,8 @@
 <?php
 
 include_once "../Estructura/Header.php";
+include_once "../../configuracion.php";
 
-include_once "../../utils/utils.php";
-include_once "../../modelo/Persona.php";
-include_once '../../Modelo/Auto.php';
-include_once '../../Control/AbmAuto.php';
-include_once '../../Control/AbmPersona.php';
 
 $datos = data_submitted();
 $abmAuto = new AbmAuto();

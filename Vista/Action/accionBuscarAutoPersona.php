@@ -1,9 +1,8 @@
 <?php 
 
 include_once "../Estructura/Header.php";
-include "../../utils/utils.php";
-include '../../Modelo/Auto.php';
-include '../../Control/AbmAuto.php';
+include_once "../../configuracion.php";
+
 
 
 echo "<div class='container cont-form'>";

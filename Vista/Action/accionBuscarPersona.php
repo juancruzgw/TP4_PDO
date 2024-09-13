@@ -1,9 +1,8 @@
 <?php 
 
 include '../Estructura/Header.php';
-include '../../utils/utils.php';
-include '../../Modelo/Persona.php';
-include '../../Control/AbmPersona.php';
+include_once "../../configuracion.php";
+
 
 $abmPersona = new AbmPersona();
 $datos = data_submitted();

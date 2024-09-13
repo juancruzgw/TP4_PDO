@@ -142,6 +142,8 @@ class AbmAuto{
         return $arreglo;
     }
 
+    
+
     public function obtenerDatos($param){
         $where = " true ";
         if ($param <> NULL) {
@@ -159,7 +161,9 @@ class AbmAuto{
         $arreglo = $obj->listar($where);
         $result = [];
         if (!empty($arreglo)) {
-            $result = ["patente" => $arreglo[0]->getPatente(), "marca" => $arreglo[0]->getMarca(), "modelo" => $arreglo[0]->getModelo(), "DniDuenio" => $arreglo[0]->getNroDni()];
+            foreach ($arreglo as $auto) {
+                $result[] = ["patente" => $auto->getPatente(), "marca" => $auto->getMarca(), "modelo" => $auto->getModelo(), "DniDuenio" => $auto->getNroDni()];
+            }
         }
         return $result;
     }
