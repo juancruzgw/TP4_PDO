@@ -1,16 +1,15 @@
 <?php 
 include_once "../Estructura/Header.php";
 include_once "../../configuracion.php";
+     
+$abmPersona = new AbmPersona();
+$abmAuto = new AbmAuto();
 
+$datos = data_submitted();
 
 echo "<div class='container cont-form'>";
 
-$abmPersona = new AbmPersona();
-$abmAuto = new AbmAuto();
-$datos = data_submitted();
-
 try{
-
     if($datos['patente'] !== "null" && $datos['NroDni'] !== 'null'){
         if(!empty($auto = $abmAuto->obtenerDatos($datos)) && !empty($abmPersona->buscar($datos))){
             
@@ -19,16 +18,16 @@ try{
             $datos['modelo'] = $auto["modelo"];
 
             if($abmAuto->abm($datos)){
-                echo "<div class ='todo bien🫡'>Se cambio el dueño del auto</div>";
+                echo "<div class ='modalDatosCorrecto' style='font-weight: bold; >Se cambio el dueño del auto</div>";
             }else{
-                echo "<div class=' modalDatosIncorrectos'> No se pudo cambiar el dueño del auto</div>";
+                echo "<div class=' modalDatosIncorrectos'  style='font-weight: bold;> No se pudo cambiar el dueño del auto</div>";
             }
 
         } else {
-            throw new exception("<div class =' modalDatosIncorrectos'> No se encontro el auto o la persona </div>");
+            throw new exception("<div class =' modalDatosIncorrectos'  style='font-weight: bold;> No se encontro el auto o la persona </div>");
         }
     }else{
-        throw new exception("<div class =' modalDatosIncorrectos'> No se ingresaron correctamente los datos</div>");
+        throw new exception("<div class =' modalDatosIncorrectos'  style='font-weight: bold;> No se ingresaron correctamente los datos</div>");
     }
 
 }catch(PDOException $ex){
@@ -37,6 +36,10 @@ try{
     echo $ex->getMessage();
 }
 
+
+echo "</div>";
+
+include_once "../Estructura/Footer.php";
 
 
 /*if($datos['patente'] !== "null" && $datos['NroDni'] !== 'null'){
@@ -59,7 +62,5 @@ try{
 }*/
 
 
-echo "</div>";
 
-include_once "../Estructura/Footer.php";
 ?>

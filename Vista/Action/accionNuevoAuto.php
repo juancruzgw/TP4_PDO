@@ -20,11 +20,11 @@ try {
                 $abmAuto->alta($datos);
                 echo "<div class='modalDatosCorrectos'> Se registró el auto con éxito. </div>";
             } else {
-                throw new Exception("<div class='modalDatosIncorrectos'>La patente ya está registrada en la base de datos.</div>");
+                throw new Exception("<div class='modalDatosIncorrectos' style='font-weight: bold;>La patente ya está registrada en la base de datos.</div>");
             }
             
         } else {
-            throw new Exception("<div class='modalDatosIncorrectos'>No llegaron los datos.</div>");
+            throw new Exception("<div class='modalDatosIncorrectos' style='font-weight: bold;>No llegaron los datos.</div>");
         }
         
     } else {
