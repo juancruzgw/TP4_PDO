@@ -6,7 +6,6 @@ include_once "../../configuracion.php";
 
 
 echo "<div class='container cont-form'>";
-echo "<div class='respuestaBuscarAuto'>";
     
 $abm = new AbmAuto();
 $datos = data_submitted();
