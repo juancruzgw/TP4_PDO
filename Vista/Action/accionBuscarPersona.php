@@ -17,7 +17,6 @@ try {
 
       if ($persona = $abmPersona->obtenerDatos($datos)) {
 
-         $persona = $persona[0];
          echo "<form action='../Action/ActualizarDatosPersona.php' method='post' class='contenedor cont-form'>";
          echo "<div class='form-group'>";
          echo "<h2>Modificar datos de la persona</h2>";
@@ -34,20 +33,24 @@ try {
          echo "<input type='text' name='Domicilio' value='".$persona['Domicilio']."'class='form-control'>";
          echo "<input type='submit' value='Actualizar' class='btn btn-primary'>";
          echo "</div>";
+         echo "</form>";
       } else {
-         throw new Exception("<div class=''>no existe esta persona</div>");
+         throw new Exception("<div class='modalDatosIncorrectos'>no existe esta persona</div>");
       }
 
    } else {
-      throw new Exception("<div class=''>El dni debe ser un numero</div>");
+      throw new Exception("<div class='modalDatosIncorrectos'>El dni debe ser un numero</div>");
    }
+
+
 } catch (PDOException $ex) {
-   echo "Hubo un error en la base de datos: " . $ex->getMessage();
+   echo "<div class ='modalDatosIncorrectos'".$ex->getMessage()."</div>";
 } catch (Exception $ex) {
    echo $ex->getMessage();
 }
 
 echo "</div>";
+
 include_once "../Estructura/Footer.php";
 
 ?>

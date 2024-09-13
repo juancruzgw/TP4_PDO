@@ -1,6 +1,6 @@
 <?php
-include "../Estructura/Header.php";
-include "../../utils/utils.php";
+include_once "../Estructura/Header.php";
+include_once "../../utils/utils.php";
 include '../../Modelo/Persona.php';
 include '../../Modelo/Auto.php';
 include '../../Control/AbmPersona.php';
@@ -11,22 +11,25 @@ $datos = data_submitted();
 
 $datos['accion'] = 'editar';
 
+echo "<div class='container cont-form'>";
+
 try {
     if (isset($datos)) {
         if ($abmPersona->abm($datos)) {
-            echo "Se ingresaron correctamente los datos";
+            echo "<div class ='modalDatosCorrectos'>Se ingresaron correctamente los datos</div>";
         } else {
-            echo "Se ingresaron incorrectamente";
+            echo "<div class ='modalDatosIncorrectos'>Se ingresaron incorrectamente</div>";
         }
     } else {
-        throw new exception("No llegaron los datos");
+        throw new exception("<div class ='modalDatosIncorrectos' No llegaron los datos </div>");
     }
 } catch (PDOException $ex) {
-    echo "Hubo un error en la base de datos: " . $ex->getMessage();
+    echo "<div class ='modalDatosIncorrectos'".$ex->getMessage()."</div>";
 } catch (Exception $ex) {
-    echo $e->getMessage();
+    echo $ex->getMessage();
 }
 
+echo "</div>";
 
 /*
 if(isset($datos)){

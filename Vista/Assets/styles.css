@@ -120,21 +120,54 @@
     justify-content: center;
 }
 
-
-.cambioDatos{
-    height: 50%;
+/* Aplicamos la animación al div */
+.modalDatosIncorrectos {
+    animation: entrada 1s ease-out;
+    background-color: #cc2727;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px;
+    text-align: center;
+    width: 100%;
+    height: 20%;
+    color: #ffff;
 }
 
-.NocambioDatos{
-    
-
+/* Definimos la animación */
+@keyframes entrada {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-.personaNoEncontrada{
 
-
+/* Aplicamos la animación al div */
+.modalDatosCorrectos {
+    animation: entradaDos 1s ease-out;
+    background-color: #cc2727;
+    padding: 20px;
+    border-radius: 5px;
+    margin: 20px;
+    text-align: center;
+    width: 100%;
+    height: 20%;
+    color: #ffff;
 }
 
-.ingresoErroneoDatos{
-
+/* Definimos la animación */
+@keyframes entradaDos {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
+

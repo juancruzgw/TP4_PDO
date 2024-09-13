@@ -22,13 +22,13 @@ try {
 
             if (empty($abmAuto->buscar($datos))) {
                 $abmAuto->alta($datos);
-                echo "<div class='registroAutoExito'> Se registró el auto con éxito. </div>";
+                echo "<div class='modalDatosCorrectos'> Se registró el auto con éxito. </div>";
             } else {
-                throw new Exception("La patente ya está registrada en la base de datos.");
+                throw new Exception("<div class='modalDatosIncorrectos'>La patente ya está registrada en la base de datos.</div>");
             }
             
         } else {
-            throw new Exception("No llegaron los datos.");
+            throw new Exception("<div class='modalDatosIncorrectos'>No llegaron los datos.</div>");
         }
         
     } else {
@@ -38,9 +38,9 @@ try {
     }
     
 } catch (PDOException $ex) {
-    echo "Error en la base de datos: " . $ex->getMessage();
+    echo "<div class ='modalDatosIncorrectos'".$ex->getMessage()."</div>";
 } catch (Exception $ex) {
-    echo "Ocurrió un error: " . $ex->getMessage();
+    echo $ex->getMessage();
 }
 
 

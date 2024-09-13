@@ -23,20 +23,21 @@ try{
             $datos['modelo'] = $auto["modelo"];
 
             if($abmAuto->abm($datos)){
-                echo "<div class = cambioDatos contenedorItems>Se cambio el dueño del auto</div>";
+                echo "<div class ='modalDatosIncorrectos'>Se cambio el dueño del auto</div>";
             }else{
-                echo "<div class='NocambioDatos contenedorItems'>No se pudo cambiar el dueño del auto</div>";
+                echo "<div class=' modalDatosIncorrectos'> No se pudo cambiar el dueño del auto</div>";
             }
+
         } else {
-            echo "<div class= 'personaNoEncontrada contenedorItems'> No se encontro el auto o la persona </div>";
+            throw new exception("<div class =' modalDatosIncorrectos'> No se encontro el auto o la persona </div>");
         }
     }else{
-        throw new exception("<div class = ingresoErroneoDatos contenedorItems> no se ingresaron correctamente los datos</div>");
+        throw new exception("<div class =' modalDatosIncorrectos'> No se ingresaron correctamente los datos</div>");
     }
 
-}catch(PDOexception $ex){
-    echo "Hubo un error en la base de datos".$ex->getMessage();;
-}catch(exception $ex){
+}catch(PDOException $ex){
+  echo "<div class ='modalDatosIncorrectos'".$ex->getMessage()."</div>";
+}catch(Exception $ex){
     echo $ex->getMessage();
 }
 

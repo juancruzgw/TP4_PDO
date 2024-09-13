@@ -28,11 +28,11 @@ try{
                  </div>";
         }            
     }else{
-        throw new exception("<h2>Auto no encontrado</h2>");
+        throw new exception("<div class ='modalDatosIncorrectos'>Auto no encontrado</div>");
     }
 
 }catch(PDOException $ex){
-  echo "Hubo un error en la base de datos: " . $ex->getMessage();
+  echo "<div class ='modalDatosIncorrectos'".$ex->getMessage()."</div>";
 }catch(Exception $ex){
     echo $ex->getMessage();
 }

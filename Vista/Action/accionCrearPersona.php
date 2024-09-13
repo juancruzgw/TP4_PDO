@@ -17,21 +17,23 @@ try {
     if(isset($datos)){
         if(empty($abm->buscar($dni))){
             $abm->alta($datos);
-            echo "<div class='respPersonaCreada'>
+
+            echo "<div class='modalDatosCorrectos'>
                 Persona creada con éxito🥳
                 </div>";
+
         }else{
-            echo "<div class='respPersonaNoCreada'>
+            echo "<div class='modalDatosIncorrectos'>
                     El dni ya esta registrado en la base de datos. 😔
                  </div>";
         }  
     }else{
-        throw new exception("<div class='respPersonaNoCreada'>No llegaron los datos.</div>");  
+        throw new exception("<div class='modalDatosIncorrectos'>No llegaron los datos.</div>");  
     }
 
-}catch (PDOexception $ex) {
-    echo "Hubo un error en la base de datos";
-} catch (exception $ex) {
+}catch (PDOException $ex) {
+  echo "<div class ='modalDatosIncorrectos'".$ex->getMessage()."</div>";
+} catch (Exception $ex) {
     echo $ex->getMessage();
 }
 
