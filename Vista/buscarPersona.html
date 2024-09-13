@@ -73,31 +73,13 @@
         </nav>
     </header>
 
-    <!-- 
-    Crear   una   pagina   BuscarPersona.html   que   contenga   un   formulario   que   permita   cargar   un numero de documento de una persona. 
-    -Estos datos seran enviados a una pagina accionBuscarPersona.php
-
-    -busque los datos de la persona cuyo documento sea el ingresado en el formulario los muestre en un nuevo formulario; 
-    
-    -a su vez este nuevo formulario debera permitir modificar los datos mostrados (excepto el nro de
-    documento) y estos seran enviados a otra 
-    -pagina ActualizarDatosPersona.php que actualiza los datos de la persona.  
-    
-    Utilizar  css  y  validaciones   javaScript  cuando  crea   conveniente.  Recordar   usar  la  capa  de  control
-    antes generada, no se puede acceder directamente a las clases del ORM.
-    
-    -buscarPersona.html -> accionBuscarPersona.php -> ActualizarDatosPersona.php
-    -buscarPersona.html pide el dni 
-    -accionBuscarPersona.php busca y muestra pero no se puede modificar excepto el nro de documento
-    -actualizarDatosPersona.php actualiza los datos y devuelve si pudo o no actualizarlo
-    -->
     <div class="contenedor cont-form">
         <form action="../Vista/Action/accionBuscarPersona.php" method="post">
             <div class="form-group">
-                <label for="NroDni">Ingrese un DNI </label>
-                <input type="number" name="NroDni" id="NroDni" class="form-control">
+                <label for="NroDni" style="color: #2196F3;font-size: 20px;">Ingrese un DNI </label>
+                <input type="number" name="NroDni" id="NroDni" class="form-control mt-2"  value="45882251">
             </div>
-            <button type="submit" class="btn btn-primary btn-block">
+            <button type="submit" class="btn btn-primary btn-block mt-4">
                 Buscar <i class="bi bi-pencil"></i>
             </button>
         </form>

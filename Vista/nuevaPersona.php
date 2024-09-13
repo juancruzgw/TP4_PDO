@@ -3,37 +3,37 @@
 <div class="container cont-form">
     <form id="formularioCrearPersona" method="post" action="../Vista/Action/accionCrearPersona.php">
            
-            <div class="form-group">
-                <label for="Nombre">Ingrese un nombre</label>
+            <div class="form-group mt-2">
+                <label for="Nombre" style="color: #2196F3;font-size: 20px;">Ingrese un nombre</label>
                 <input type="text" name="Nombre" id="Nombre" class="form-control">
             </div>
             
-            <div class="form-group">
-                <label for="Apellido">Ingrese un apellido</label>
+            <div class="form-group mt-4">
+                <label for="Apellido" style="color: #2196F3;font-size: 20px;">Ingrese un apellido</label>
                 <input type="text" name="Apellido" id="Apellido" class="form-control">
             </div>
             
-            <div class="form-group">
-                <label for="NroDni">Ingrese un DNI</label>
+            <div class="form-group mt-4">
+                <label for="NroDni" style="color: #2196F3;font-size: 20px;">Ingrese un DNI</label>
                 <input type="number" name="NroDni" id="NroDni" class="form-control">
             </div>
             
-            <div class="form-group">
-                <label for="fechaNac">Ingrese una fecha de nacimiento</label>
+            <div class="form-group mt-4">
+                <label for="fechaNac" style="color: #2196F3;font-size: 20px;">Ingrese una fecha de nacimiento</label>
                 <input type="date" name="fechaNac" id="fechaNac" class="form-control">
             </div>
             
-            <div class="form-group">
-                <label for="Telefono">Ingrese un teléfono</label>
+            <div class="form-group mt-4">
+                <label for="Telefono" style="color: #2196F3;font-size: 20px;">Ingrese un teléfono</label>
                 <input type="number" name="Telefono" id="Telefono" class="form-control">
             </div>
 
-            <div class="form-group">
-                <label for="Domicilio">Ingrese un domicilio</label>
-                <input type="text" name="Domicilio" id="Domicilio" class="form-control">
+            <div class="form-group mt-4">
+                <label for="Domicilio" style="color: #2196F3;font-size: 20px;">Ingrese un domicilio</label>
+                <input type="text"  name="Domicilio" id="Domicilio" class="form-control">
             </div>
 
-            <button type="submit" class="btn btn-primary btn-block">
+            <button type="submit" class="btn btn-primary btn-block mt-4">
                 Crear <i class="bi bi-pencil"></i>
             </button>
             

@@ -12,13 +12,13 @@ $datos = data_submitted();
 $abmAuto = new AbmAuto();
 $abmPersona = new AbmPersona();
 
-
+echo "<div class='container cont-form'>";
 try {
     if (!empty($abmPersona->buscar($datos))) {
         
         if ($datos['patente'] !== "null" && $datos['marca'] !== "null" && $datos['modelo'] !== "null" && $datos['NroDni'] !== "null") {
             $datos['dniDuenio'] = $datos['NroDni'];
-            echo "<div class='datosAuto'> Datos del auto: </div>";
+            echo "Datos del auto:";
 
             if (empty($abmAuto->buscar($datos))) {
                 $abmAuto->alta($datos);
@@ -32,8 +32,8 @@ try {
         }
         
     } else {
-        echo "<div class='respPersonaNoCreada'> La persona no se encuentra registrada en la base de datos.  
-                <a href='NuevoPersona.php'>Cargar nueva persona</a>
+        echo "<div class='modalDatosIncorrectos'> La persona no se encuentra registrada en la base de datos. 
+                <a href='NuevoPersona.php' class='link'>Cargar nueva persona</a>
             </div>";
     }
     
@@ -70,6 +70,8 @@ if(empty($abmPersona->buscar($datos))){
     }
 }
 */
+
+echo "</div>";
 
 include "../Estructura/Footer.php";
 ?>

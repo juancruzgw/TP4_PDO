@@ -7,7 +7,7 @@ include '../../Modelo/Auto.php';
 include '../../Control/AbmPersona.php';
 include '../../Control/AbmAuto.php';
 
-echo "<div class='container cont-form'">
+echo "<div class='container cont-form'>";
 
 $abmPersona = new AbmPersona();
 $abmAuto = new AbmAuto();
@@ -16,7 +16,7 @@ $datos = data_submitted();
 try{
 
     if($datos['patente'] !== "null" && $datos['NroDni'] !== 'null'){
-        if(!empty($auto = $abmAuto->obtenerDatos($datos)[0]) && !empty($abmPersona->buscar($datos))){
+        if(!empty($auto = $abmAuto->obtenerDatos($datos)) && !empty($abmPersona->buscar($datos))){
             
             $datos['accion'] = 'editar';
             $datos['marca'] = $auto['marca'];

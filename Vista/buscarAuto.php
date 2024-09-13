@@ -11,11 +11,11 @@ include './../Control/AbmAuto.php';
         <form action="./Action/accionBuscarAuto.php" id="formulario" method="post">
         
               <div class="form-group ">
-              <label> <i class="bi bi-car-front"></i> Ingresá la Patente del auto </label>
+                <label style="color: #2196F3;font-size: 20px;"> <i class="bi bi-car-front"></i> Ingresá la Patente del auto </label>
                 <label for="patente"></label>
-                <input  type="text" name="patente" id="patente" class="form-control">
+                <input  type="text" name="patente" id="patente" class="form-control mt-2" value="Porsche 718">
               </div>
-              <button type="submit" class="btn btn-primary btn-block ">Buscar<i class="bi bi-search"></i></button>
+              <button type="submit" class="btn btn-primary btn-block mt-4">Buscar<i class="bi bi-search"></i></button>
        </form>
 
         </div>
