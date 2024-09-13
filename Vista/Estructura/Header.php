@@ -18,10 +18,6 @@
         href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.5.0/font/bootstrap-icons.min.css">
     <!---BOOSTRAP--->
     <!---jquery--->
-
-    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
     <!---jquery--->
 </head>
 
@@ -59,7 +55,8 @@
                     </li>
                     <li class="nav-item m-2">
                         <a class="nav-link btn btn-dark mx-1 text-white"
-                            href="../../../TP4_PDO/Vista/NuevoAuto.php">Registrar auto <i class="bi bi-plus"></i></a>
+                            href="../../../TP4_PDO/Vista/NuevoAuto.php">Registrar auto <i class="bi bi-bus-front"></i>
+                        </a>
                     </li>
                     <li class="nav-item m-2">
                         <a class="nav-link btn btn-dark mx-1 text-white"
@@ -74,8 +71,11 @@
                 </ul>
             </div>
         </nav>
-    </header>
-    <script src="../Assets/validaciones.js"></script>
+</header>
+    <script href="../Assets/validaciones.js"></script>
+    <script href="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <script href="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script href="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/additional-methods.min.js"></script>
 </body>
 
 </html>

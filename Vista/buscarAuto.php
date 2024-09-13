@@ -1,5 +1,5 @@
 <?php
-include_once "./Estructura/Header.php";
+include_once "./Estructura/Header.html";
 ?>
     <div class="container cont-form">
    
