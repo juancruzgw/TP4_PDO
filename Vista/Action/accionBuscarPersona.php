@@ -1,22 +1,18 @@
 <?php 
 
 include '../Estructura/Header.php';
-
 include '../../utils/utils.php';
 include '../../Modelo/Persona.php';
-include '../../Modelo/Auto.php';
 include '../../Control/AbmPersona.php';
-include '../../Control/AbmAuto.php';
 
 $abmPersona = new AbmPersona();
 $datos = data_submitted();
 
 try {
    if (is_numeric($datos['NroDni'])) {
-      $datos = ["NroDni" => $datos['NroDni']];
+
 
       if ($persona = $abmPersona->obtenerDatos($datos)) {
-
          echo "<form action='../Action/ActualizarDatosPersona.php' method='post' class='contenedor cont-form'>";
          echo "<div class='form-group'>";
          echo "<h2>Modificar datos de la persona</h2>";

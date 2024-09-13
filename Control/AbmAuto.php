@@ -157,7 +157,11 @@ class AbmAuto{
         }
         $obj = new Auto();
         $arreglo = $obj->listar($where);
-        return ["patente" => $arreglo[0]->getPatente(), "marca" => $arreglo[0]->getMarca(), "modelo" => $arreglo[0]->getModelo(), "DniDuenio" => $arreglo[0]->getNroDni()];
+        $result = [];
+        if (!empty($arreglo)) {
+            $result = ["patente" => $arreglo[0]->getPatente(), "marca" => $arreglo[0]->getMarca(), "modelo" => $arreglo[0]->getModelo(), "DniDuenio" => $arreglo[0]->getNroDni()];
+        }
+        return $result;
     }
 }
 ?>

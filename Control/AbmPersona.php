@@ -144,22 +144,26 @@ class AbmPersona{
     public function obtenerDatos($param){
         $where = " true ";
         if ($param <> NULL) {
-            if (isset($param['fechaNac']))
-                $where .= " and NroDni =" . $param['NroDni'];
+            if (isset($param['NroDni']))
+                $where .= " and NroDni = " . $param['NroDni'];
             if (isset($param['Nombre']))
-                $where .= " and nombre ='" . $param['Nombre'] . "'";
+                $where .= " and nombre = '" . $param['Nombre'] . "'";
             if (isset($param['Apellido']))
-                $where .= " and apellido ='" . $param['Apellido'] . "'";
+                $where .= " and apellido = '" . $param['Apellido'] . "'";
             if (isset($param['fechaNac']))
-                $where .= " and fechaNac ='" . $param['fechaNac'] . "'";
+                $where .= " and fechaNac = '" . $param['fechaNac'] . "'";
             if (isset($param['Telefono']))
-                $where .= " and telefono ='" . $param['Telefono'] . "'";
+                $where .= " and telefono = '" . $param['Telefono'] . "'";
             if (isset($param['Domicilio']))
-                $where .= " and domicilio ='" . $param['Domicilio'] . "'";
+                $where .= " and domicilio = '" . $param['Domicilio'] . "'";
         }
         $obj = new Persona();
         $arreglo = $obj->listar($where);
-        return ['NroDni' => $arreglo[0]->getNroDni(), 'Nombre' => $arreglo[0]->getNombre(), 'Apellido' => $arreglo[0]->getApellido(), 'fechaNac' => $arreglo[0]->getFechaNac(), 'Telefono' => $arreglo[0]->getTelefono(), 'Domicilio' => $arreglo[0]->getDomicilio()];
+        $result = [];
+        if(!empty($arreglo)){
+           $result = ['NroDni' => $arreglo[0]->getNroDni(),'Nombre' => $arreglo[0]->getNombre(),'Apellido' => $arreglo[0]->getApellido(),'fechaNac' => $arreglo[0]->getFechaNac(),'Telefono' => $arreglo[0]->getTelefono(),'Domicilio' => $arreglo[0]->getDomicilio()];
+        } 
+        return $result;
     }
 
 }

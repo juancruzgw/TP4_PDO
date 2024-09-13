@@ -6,10 +6,10 @@
         <div class="form-group">
 
             <label for="patente" style="color: #2196F3;font-size: 20px;" >Ingrese el numero de patente del auto</label>
-            <input type="text" class="form-control" id="patente" name="patente" value="Taycan Cross Turismo">
+            <input type="text" class="form-control" id="patente" name="patente" >
 
             <label for="NroDni" style="color: #2196F3;font-size: 20px;">Ingrese el numero de documento de una persona</label>
-            <input type="text" class="form-control" id="NroDni" name="NroDni" value="46257851">
+            <input type="text" class="form-control" id="NroDni" name="NroDni" >
 
         </div>
         <button type="submit" class="btn btn-primary mt-4">Guardar</button>

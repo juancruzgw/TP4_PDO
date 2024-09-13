@@ -5,18 +5,17 @@ include "../../utils/utils.php";
 include '../../Modelo/Auto.php';
 include '../../Control/AbmAuto.php';
 
+$abm = new AbmAuto();
+$datos = data_submitted();
 
 echo "<div class='container cont-form'>";
 echo "<div class='respuestaBuscarAuto'>";
-        
-$abm = new AbmAuto();
-$datos = data_submitted();
 
 try{
     if($datos['patente'] == 'null'){
         throw new Exception("<h2>Debe ingresar una patente</h2>");
     }
-    if($auto = $abm->obtenerDatos($datos["patente"])){
+    if($auto = $abm->obtenerDatos($datos)){
         echo "<h2>Resultado de la busqueda</h2>";
         echo "<div class='respuestaBuscarAuto' > ".
         "<p>Patente: ".$auto['patente']." </p>".
@@ -25,30 +24,13 @@ try{
         "<p>Dni dueño: ".$auto['DniDuenio']." </p>".
         "</div>";
     }else{
-        throw new Exception("<h2>El auto no fue encontrado</h2>");
+        throw new Exception("<div class='modalDatosIncorrectos'>El auto no fue encontrado</div>");
     }
 }catch(PDOException $ex){
-    echo "Hubo un error en la base de datos: " . $ex->getMessage();
+    echo "<div class='modalDatosIncorrectos'>Hubo un error en la base de datos: " . $ex->getMessage()."</div>";
 }catch(Exception $ex){
-    echo "<h2>".$ex->getMessage()."</h2>";
+    echo "<div class='modalDatosIncorrectos'>".$ex->getMessage()."</div>";
 }
-
-
-        
-// if(isset($auto[0])){
-//     echo "<h2>Resultado de la busqueda</h2>";
-//     $autoEncontrado = $auto[0];
-//     echo "<div class='respuestaBuscarAuto'>
-//     <p>Patente: {$autoEncontrado->getPatente()}</p>
-//     <p>marca: {$autoEncontrado->getMarca()}</p>
-//     <p>modelo:{$autoEncontrado->getModelo()}</p>
-//     <p>dni dueño:{$autoEncontrado->getNroDni()}</p>
-//     </div>";
-// }else{
-//     echo "<h2>Auto no encontrado</h2>";
-// }
-    
-
 
 echo "</div>";
 echo "</div>";

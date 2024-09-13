@@ -23,7 +23,7 @@ try{
             $datos['modelo'] = $auto["modelo"];
 
             if($abmAuto->abm($datos)){
-                echo "<div class ='modalDatosIncorrectos'>Se cambio el dueño del auto</div>";
+                echo "<div class ='todo bien🫡'>Se cambio el dueño del auto</div>";
             }else{
                 echo "<div class=' modalDatosIncorrectos'> No se pudo cambiar el dueño del auto</div>";
             }
