@@ -1,6 +1,6 @@
 <?php
-include_once "../Estructura/Header.php";
 include_once "../../configuracion.php";
+include_once "../Estructura/Header.php";
 
 $abmPersona = new AbmPersona();
 $datos = data_submitted();
