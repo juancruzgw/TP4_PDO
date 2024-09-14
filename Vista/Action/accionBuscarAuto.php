@@ -12,9 +12,9 @@ try{
     if($datos['patente'] == 'null'){
         throw new Exception("<h2>Debe ingresar una patente</h2>");
     }
-    if($auto = $abm->obtenerDatos($datos)){
-        echo "<h2>Resultado de la busqueda</h2>";
+    if($auto = $abm->obtenerDatos($datos)[0]){
         echo "<div class='respuestaBuscarAuto' > ".
+        "<h2>Resultado de la busqueda</h2>".
         "<p>Patente: ".$auto['patente']." </p>".
         "<p>Marca: ".$auto['marca']." </p>".
         "<p>Modelo: ".$auto['modelo']." </p>".

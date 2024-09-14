@@ -1,7 +1,6 @@
-
-$.validator.addMethod("patenteValida", function(value, element) {
-    return this.optional(element) || /^[A-Z]{3}\d{3}$/.test(value);
-}, "Por favor ingrese una patente válida.");
+$.validator.addMethod("patenteValida", function(value){
+    return /^[A-Za-z]{3}\s[0-9]{3}$/.test(value) || /^[A-Za-z]{3}[0-9]{3}$/.test(value);
+}, "Tiene que ser una patente valida");
 
 
 $("#formulario").validate({
