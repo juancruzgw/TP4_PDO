@@ -8,7 +8,7 @@ $abmPersona = new AbmPersona();
 // Obtener todos los autos
 
 echo "<div class='container contenedor rounded shadow mb-3'>";
-echo "<h1 class='my-4'>Listado de Autos</h1>";
+echo "<h1 class='my-4'>Listado de Personas.</h1>";
 
 $autos = $abmAuto->obtenerDatos(null);
 

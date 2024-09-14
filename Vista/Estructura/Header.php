@@ -57,7 +57,7 @@
                     </li>
                     <li class="nav-item m-2">
                         <a class="nav-link btn btn-dark mx-1 text-white"
-                            href="../../../TP4_PDO/Vista/NuevoAuto.php">Registrar auto <i class="bi bi-bus-front"></i>
+                            href="../../../TP4_PDO/Vista/NuevoAuto.php">Registrar auto <i class="bi bi-plus"></i></i>
                         </a>
                     </li>
                     <li class="nav-item m-2">
