@@ -7,13 +7,11 @@ echo "<div class='container cont-form'>";
 
 $abm = new AbmPersona();
 $datos = data_submitted();
-$dni = ["NroDni" => $datos["NroDni"]];
-$persona = new Persona();
 //echo "<h2>" .$datos['NroDni'] ."</h2>";
 
 try {
-    if(isset($datos) && $datos["NroDni"] === null){
-        if(empty($abm->buscar($dni))){
+    if(isset($datos) && $datos["NroDni"] !== 'null'){
+        if(empty($abm->buscar($datos))){
             $abm->alta($datos);
 
             echo "<div class='modalDatosCorrectos'>
