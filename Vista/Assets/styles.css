@@ -49,28 +49,7 @@
     margin-top: 20px; /* Margen superior */
 }
 
-.futer .list-inline-item{
-    
-    font-size: large;
-    transition: 1.5s ;
-     color: 1.5s ease-in-out;
-    margin-left: 25px;
-    animation: colorChange 10s infinite;
-    padding: 20px;
 
-   
-}
-.futer .list-inline-item:hover{
-    transform: rotateX(360deg);
-    
-    color: #000000;
-    
-  
-    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
-    border-radius: 10px;
-
-    
-}
 .respuestaBuscarAuto {
     margin: auto;
     margin-top: 20px;
@@ -201,6 +180,102 @@
 .formularioCrearPersona {
 
 }
+/* NAV bar -------------------*/
+.navbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+   
+}
 
 
+.nav-item {
+    position: relative;
+    margin: 0 40px;
+}
 
+
+.nav-link {
+    font-size: 1.1rem;
+    transition: background-color 0.5s ease, color 0.6s ease, transform 0.6s ease;
+    border-radius: 8px;
+    padding: 0.5rem 1.2rem;
+    margin-right: 40px;
+}
+
+
+.nav-link:hover {
+    background-color: #495057;
+    color: #f8f9fa;
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+
+.nav-link i {
+    transition: transform 0.6s ease-in-out;
+}
+
+
+.nav-link:hover i {
+    transform: translateX(5px);
+}
+
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background-color: #f8f9fa;
+    bottom: 0;
+    left: 0;
+    transition: width 0.6s ease-in-out;
+}
+
+
+.nav-item:hover::after {
+    width: 100%;
+}
+
+
+.navbar-toggler {
+    border: 2px solid #f8f9fa;
+    transition: background-color 0.6s ease-in-out;
+}
+
+.navbar-toggler:hover {
+    background-color: #343a40;
+}
+
+
+/* el futer --------------*/
+.list-inline-item {
+    display: inline-block;
+    margin: 0 15px; 
+    font-size: 1.1rem; 
+    transition: color 0.3s ease, transform 0.3s ease;
+
+}
+
+.futer .list-inline-item{
+    margin: 0 60px;
+    font-size: large;
+    transition: 1.5s ;
+     color: 1.5s ease-in-out;
+    margin-left: 25px;
+    animation: colorChange 10s infinite;
+    padding: 20px;
+
+   
+}
+.futer .list-inline-item:hover{
+    transform: rotateX(360deg);
+    
+    
+    color: #000000; 
+  
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+
+    
+}
