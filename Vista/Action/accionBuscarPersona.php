@@ -5,12 +5,16 @@ include_once "../../configuracion.php";
 
 $abmPersona = new AbmPersona();
 $datos = data_submitted();
+$persona = $abmPersona->obtenerDatos($datos);
+
+
 
 try {
    if (is_numeric($datos['NroDni'])) {
 
 
       if ($persona = $abmPersona->obtenerDatos($datos)) {
+         $persona = $persona[0];
          echo "<form action='../Action/ActualizarDatosPersona.php' method='post' class='contenedor cont-form'>";
          echo "<div class='form-group'>";
             echo "<h2>Modificar datos de la persona</h2>";
