@@ -19,7 +19,7 @@
     <!---jquery--->
     <script src="https://code.jquery.com/jquery-3.7.1.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js?v=1.0.2" defer></script>
-    <script src="../../../TP4_PDO/Vista/Assets/validaciones.js?v=3.0.0" defer></script>
+    <script src="../../../TP4_PDO/Vista/Assets/validaciones.js?v=4.0.0" defer></script>
     <!---jquery--->
 </head>
 

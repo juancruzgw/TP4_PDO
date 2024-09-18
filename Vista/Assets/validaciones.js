@@ -46,7 +46,14 @@ $("#formulario").validate({
             digits: true,
             minlength: 7,
             maxlength: 8
-        }
+        },
+        modelo:{
+            required: true,
+            digits: true
+        },
+        marca:{
+            required: true
+        },
 
     },
     messages:{
@@ -91,8 +98,14 @@ $("#formulario").validate({
             digits: "El DNI debe ser un numero",
             minlength: "El DNI debe tener al menos 7 caracteres",
             maxlength: "El DNI debe tener menos de 8 caracteres"
+        },
+        modelo:{
+            required: "Debe ingresar el modelo",
+            digits: "El modelo debe ser un numero"
+        },
+        marca:{
+            required: "Debe ingresar la marca"
         }
-
     }
 });
 
