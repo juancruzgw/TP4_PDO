@@ -108,6 +108,7 @@ class AbmAuto{
 
         $resp = false;
 
+
         if ($this->seteadosCamposClaves($param)) {
             $elObjtTabla = $this->cargarObjeto($param);
             if ($elObjtTabla != null && $elObjtTabla->modificar()) {

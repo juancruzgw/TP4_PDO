@@ -12,16 +12,21 @@ try{
     if($datos['patente'] == 'null'){
         throw new Exception("<h2>Debe ingresar una patente</h2>");
     }
-    if($auto = $abm->obtenerDatos($datos)[0]){
-        echo "<div class='respuestaBuscarAuto' > ".
-        "<h2>Resultado de la busqueda</h2>".
-        "<p>Patente: ".$auto['patente']." </p>".
-        "<p>Marca: ".$auto['marca']." </p>".
-        "<p>Modelo: ".$auto['modelo']." </p>".
-        "<p>Dni dueño: ".$auto['DniDuenio']." </p>".
-        "</div>";
+    if($auto = $abm->obtenerDatos($datos)){
+        $auto = $auto[0];
+
+        echo "<div class='modalDatos
+        '><h2>Auto encontrado</h2>";
+        echo "<p>Patente: ".$auto['patente']."</p>";
+        echo "<p>Marca: ".$auto['marca']."</p>";
+        echo "<p>Modelo: ".$auto['modelo']."</p>";
+        echo "<p>DNI del dueño: ".$auto['DniDuenio']."</p>";
+        echo "</div>";
+
+
+
     }else{
-        throw new Exception("<div class='modalDatosIncorrectos' style='font-weight: bold;'>El auto no fue encontrado</div>");
+        echo "<div class='modalDatos Incorrectos'>No se encontraron datos</div>";
     }
 }catch(PDOException $ex){
     echo "<div class='modalDatosIncorrectos' style='font-weight: bold;'>Hubo un error en la base de datos:" . $ex->getMessage()."</div>";
