@@ -2,6 +2,10 @@ $.validator.addMethod("patenteValida", function(value){
     return /^[A-Za-z]{3}\s[0-9]{3}$/.test(value) || /^[A-Za-z]{3}[0-9]{3}$/.test(value);
 }, "Tiene que ser una patente valida");
 
+$.validator.addMethod('toString', function(value, element) {
+    return  /^[a-zA-Z]+$/.test(value);
+}, "Solo letras");
+
 
 $("#formulario").validate({
     rules:{
@@ -13,12 +17,14 @@ $("#formulario").validate({
         Nombre:{
             required: true,
             minlength: 3,
-            maxlength: 50
+            maxlength: 50,
+            toString: true
         },
         Apellido:{
             required: true,
             minlength: 3,
-            maxlength: 50
+            maxlength: 50,
+            toString: true
         },
         NroDni:{
             required: true,
@@ -65,12 +71,15 @@ $("#formulario").validate({
         Nombre:{
             required: "Debe ingresar el nombre",
             minlength: "El nombre debe tener al menos 3 caracteres",
-            maxlength: "El nombre debe tener menos de 50 caracteres"
+            maxlength: "El nombre debe tener menos de 50 caracteres",
+            toString: "Solo letras"
         },
         Apellido:{
             required: "Debe ingresar el apellido",
             minlength: "El apellido debe tener al menos 3 caracteres",
-            maxlength: "El apellido debe tener menos de 50 caracteres"
+            maxlength: "El apellido debe tener menos de 50 caracteres",
+            toString: "Solo letras"
+
         },
         NroDni:{
             required: "Debe ingresar el DNI",

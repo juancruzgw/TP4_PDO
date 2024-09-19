@@ -14,7 +14,7 @@ try {
         if ($abmPersona->abm($datos)) {
             echo "<div class ='modalDatosCorrectos'>Se ingresaron correctamente los datos</div>";
         } else {
-            echo "<div class ='modalDatosIncorrectos'>Se ingresaron incorrectamente</div>";
+            echo "<div class ='modalDatosIncorrectos'>no se ingresaron correctamente</div>";
         }
     } else {
         throw new exception("<div class ='modalDatosIncorrectos' No llegaron los datos </div>");

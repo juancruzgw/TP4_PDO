@@ -15,7 +15,7 @@ try {
 
       if ($persona = $abmPersona->obtenerDatos($datos)) {
          $persona = $persona[0];
-         echo "<form action='../Action/ActualizarDatosPersona.php' method='post' class='contenedor cont-form'>";
+         echo "<form action='../Action/ActualizarDatosPersona.php' id='formulario' method='post' class='contenedor cont-form'>";
          echo "<div class='form-group'>";
             echo "<h2>Modificar datos de la persona</h2>";
             echo "<input type='hidden' name='NroDni' value='".$persona['NroDni']."' class='form-control'>";
