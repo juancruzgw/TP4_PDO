@@ -38,27 +38,4 @@ try{
 echo "</div>";
 
 include_once "../Estructura/Footer.php";
-
-
-/*if($datos['patente'] !== "null" && $datos['NroDni'] !== 'null'){
-    
-    if(!empty($auto = $abmAuto->obtenerDatos($datos)[0]) && !empty($abmPersona->obtenerDatos($datos))){
-        $datos['accion'] = 'editar';
-        $datos['marca'] = $auto->getMarca();
-        $datos['modelo'] = $auto->getModelo();
-
-        if($abmAuto->abm($datos)){
-            echo "<div class = cambioDatos contenedorItems>Se cambio el dueño del auto</div>";
-        }else{
-            echo "<div class='NocambioDatos contenedorItems'>No se pudo cambiar el dueño del auto</div>";
-        }
-    } else {
-        echo "<div class=personaNoEncontrada contenedorItems>No se encontro el auto o la persona</div>";
-    }
-}else{
-    echo "<div class=ingresoErroneoDatos contenedorItems>no se ingresaron correctamente los datos</div>";
-}*/
-
-
-
 ?>

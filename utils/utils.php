@@ -16,12 +16,12 @@ function data_submitted() {
         return $_AAux;
         
 }
+
 function verEstructura($e){
     echo "<pre>";
     print_r($e);
     echo "</pre>"; 
 }
-
 
 spl_autoload_register(function ($class_name){
     $directorys = array(

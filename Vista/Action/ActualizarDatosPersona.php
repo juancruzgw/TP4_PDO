@@ -27,17 +27,5 @@ try {
 
 echo "</div>";
 
-/*
-if(isset($datos)){
-    if($abmPersona->abm($datos)){
-        echo "se ingreso correctamente los datos";
-    }else{
-        echo "Se ingreso incorrectamente";
-    }
-}else{
-    echo "no llegaron los datos";
-}
-*/
-
 include_once "../Estructura/Footer.php";
 ?>
